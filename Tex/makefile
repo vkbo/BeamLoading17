@@ -3,7 +3,8 @@
 ##
 
 # Dependencies
-DEPENDS  = Bibliography.bib
+BIBLIO   = Bibliography.bib
+DEPENDS  =
 
 # EPS figures
 FIGURES := $(wildcard figures/*.eps)
@@ -20,5 +21,5 @@ Paper.pdf: Paper.tex $(DEPENDS) $(FIGURES)
 
 clean:
 	latexmk -CA
-	#rm Paper.bbl
-	#rm Paper.run.xml
+	rm PaperNotes.bib
+	rm Paper.bbl
