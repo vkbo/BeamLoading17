@@ -4,7 +4,7 @@
 
 # Dependencies
 BIBLIO   = Bibliography.bib
-DEPENDS  =
+DEPENDS  = $(BIBLIO)
 
 # EPS figures
 FIGURES := $(wildcard figures/*.eps)
