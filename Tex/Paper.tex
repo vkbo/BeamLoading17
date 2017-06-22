@@ -1,11 +1,12 @@
 
 %%
-%%  Beam Loading Paper '17'
+%%  Beam Loading Paper '17
 %% ***************************
 %%  Veronica K. Berglyd Olsen
 %%
 
-\documentclass[aps,prstab,reprint,groupedaddress]{revtex4-1}
+\documentclass[aps,prstab,reprint,amsmath,amssymb,groupedaddress]{revtex4-1}
+\bibliographystyle{apsrev}
 
 % ************************************************************************************************ %
 \begin{document}
@@ -33,21 +34,24 @@ We investigate beam loading and emittance preservation for a high-charge electro
 
 \section[\label{S:I}]{Introduction}
 
-- interested from SMI/AWAKE \\
-- requirements for AWAKE Run 2 \\
-The preliminary design of AWAKE Run 2 will split the plasma cell into two sections. The first section of 4m is the SMI stage. The electron beam will be injected into the modulated proton beam before stage two, where acceleration will occur. As the $e_z$ field will decrease due to the gap between the two cells, it is desireable to keep this as short as possible \cite{adli_towards_2016}.
+% interested from SMI/AWAKE
+% requirements for AWAKE Run 2
+
+The preliminary design of AWAKE Run 2 will split the plasma cell into two sections. The first section of 4m is the SMI stage. The electron beam will be injected into the modulated proton beam before stage two, where acceleration will occur. As the $e_z$ field will decrease due to the gap between the two cells, it is desireable to keep this as short as possible \cite{adli:2016}.
 
 \section[\label{S:M}]{Method}
-%- explain analogy of short-bunch, SMI case, by referring to earlier Veronica-papers \\
-%- simulation setup PIC/quickpic OS \\
+%- explain analogy of short-bunch, SMI case, by referring to earlier Veronica-papers
+%- simulation setup PIC/quickpic OS
 
 The main focus of this study has been on the beam loading of the electron beam. In order to eliminate other factors that may affect this, we have tried several approaches to create a stable drive beam structure based on previous SMI studies [citations].
 
-Our first approach was to use a premodulated, short proton beam with the same structure as a section of the full AWAKE proton drive beam. These studies were done using the full PIC code Osiris \cite{fonseca_osiris:_2002} using 2D cylindrical-symetric simulations. The proton beam was pre-modulated by a clipped cosine function to the longitudinal density profile, with a period matching the wavelength, $\lambda_p$, of the plasma. The length was limited to $26\cdot\lambda_p$, and the electron beam injected after the 20th micro-bunch \cite{berglyd_olsen_loading_2015}. We performed several parameter scans with this setup, testing for optimal charge as well as beam length \cite{adli_towards_2016, berglyd_olsen_loading_2016}.
+Our first approach was to use a premodulated, short proton beam with the same structure as a section of the full AWAKE proton drive beam. These studies were done using the full PIC code Osiris \cite{fonseca:2002} using 2D cylindrical-symetric simulations. The proton beam was pre-modulated by a clipped cosine function to the longitudinal density profile, with a period matching the wavelength, $\lambda_p$, of the plasma. The length was limited to $26\cdot\lambda_p$, and the electron beam injected after the 20th micro-bunch \cite{berglyd_olsen:2015}. We performed several parameter scans with this setup, testing for optimal charge as well as beam length \cite{adli:2016, berglyd_olsen:2016}.
 
 [Add something about the optimal results]
 
-In order to evaluate the quality of the beam, we also needed to study its emittance. Full PIC codes like Osiris are voulnerable to numerical growth of emittance caused by what is usually referred to as the ``ǹumerical Cherenkov effect'' \cite{godfrey_numerical_1974}. The effect is caused by the EMF solver which will cause the phase velocity of electromagnetic fields to be lowet than $c$, while the beam moves very close to $c$. The effect can be mitigated somewhat by a the Lehe solver \cite{lehe_numerical_2013}, but the effect is still prominent in the the high density regions of the electron beam.
+In order to evaluate the quality of the beam, we also needed to study its emittance. Full PIC codes like Osiris are voulnerable to numerical growth of emittance caused by the ``numerical Cherenkov effect'' \cite{godfrey:1974}. This is a know issue with the Yee EMF solver, which causes the phase velocity of electromagnetic fields to be lowet than $c$, while the beam moves very close to $c$. The effect can be mitigated somewhat by a the Lehe solver \cite{lehe:2013}, but the effect is still prominent in the the high density regions of the electron beam.
+
+In order to study the emittance evolution of the beam we used QuickPIC, a fully relativistic 3D PIC code \cite{huang:2006, an:2013}.
 
 \subsection[\label{S:M:Setup}]{Simulationn Setup}
 
@@ -55,13 +59,13 @@ In order to evaluate the quality of the beam, we also needed to study its emitta
 
 \section[\label{S:BL}]{Beam loading}
 
-- discussion of the main physics and results; beam loading, bubble creation, emittance preservation \\
+% discussion of the main physics and results; beam loading, bubble creation, emittance preservation
 
 \section[\label{S:D}]{Discussion}
 \section[\label{S:C}]{Conclusion}
 
-- discussion of optimal electron beam parameters \\
-- implications for AWAKE Run 2 \\
+% discussion of optimal electron beam parameters
+% implications for AWAKE Run 2
 
 \bibliography{Bibliography}
 
