@@ -8,9 +8,9 @@
 \documentclass[aps,prstab,reprint,amsmath,amssymb,groupedaddress]{revtex4-1}
 \bibliographystyle{apsrev}
 
-% ************************************************************************************************ %
+% ******************************************************************************************************************** %
 \begin{document}
-% ************************************************************************************************ %
+% ******************************************************************************************************************** %
 
 \title{Emittance preservation of an electron bunch in a loaded quasi-linear plasma wakefield}
 
@@ -27,7 +27,10 @@
 \date{\today}
 
 \begin{abstract}
-We investigate beam loading and emittance preservation for a high-charge electron beam being accelerated in quasi-linear plasma wakefield driven by a short proton beam. The structure of the wakefield is similar to that of a long, modulated proton beam. By selecting transverse and longitudinal electron beam parameters in order to  appropriately load of the wake, we show that the bulk of the electron beam can be accelerated without significant emittance growth.
+We investigate beam loading and emittance preservation for a high-charge electron beam being accelerated in quasi-linear
+plasma wakefield driven by a short proton beam. The structure of the wakefield is similar to that of a long, modulated
+proton beam. By selecting transverse and longitudinal electron beam parameters in order to  appropriately load of the
+wake, we show that the bulk of the electron beam can be accelerated without significant emittance growth.
 \end{abstract}
 
 \maketitle
@@ -37,21 +40,37 @@ We investigate beam loading and emittance preservation for a high-charge electro
 % interested from SMI/AWAKE
 % requirements for AWAKE Run 2
 
-The preliminary design of AWAKE Run 2 proposes to use two plasma sections. The first section of 4m is the SMI stage. The electron beam will be injected into the modulated proton beam before stage two, where acceleration will occur. As the $e_z$ field will decrease due to the gap between the two cells, it is desireable to keep this as short as possible \cite{adli:2016}.
+The preliminary design of AWAKE Run 2 proposes to use two plasma sections. The first section of 4m is the SMI stage. The
+electron beam will be injected into the modulated proton beam before stage two, where acceleration will occur. As the
+$e_z$ field will decrease due to the gap between the two cells, it is desireable to keep this as short as possible
+\cite{adli:2016}.
 
 \section[\label{S:M}]{Method}
 %- explain analogy of short-bunch, SMI case, by referring to earlier Veronica-papers
 %- simulation setup PIC/quickpic OS
 
-The main focus of this study has been on the beam loading of the electron beam. In order to eliminate other factors that may affect this, we have tried several approaches to create a stable drive beam structure based on previous SMI studies [citations].
+The main focus of this study has been on the beam loading of the electron beam. In order to eliminate other factors that
+may affect this, we have tried several approaches to create a stable drive beam structure based on previous SMI studies
+[citations].
 
-Our first approach was to use a premodulated, short proton beam with the same structure as a section of the full AWAKE proton drive beam. These studies were done using the full PIC code Osiris \cite{fonseca:2002} using 2D cylindrical-symetric simulations. The proton beam was pre-modulated by a clipped cosine function to the longitudinal density profile, with a period matching the wavelength, $\lambda_p$, of the plasma. The length was limited to $26\cdot\lambda_p$, and the electron beam injected after the 20th micro-bunch \cite{berglyd_olsen:2015}. We performed several parameter scans with this setup, testing for optimal charge as well as beam length \cite{adli:2016, berglyd_olsen:2016}.
+Our first approach was to use a premodulated, short proton beam with the same structure as a section of the full AWAKE
+proton drive beam. These studies were done using the full PIC code Osiris \cite{fonseca:2002} using 2D
+cylindrical-symetric simulations. The proton beam was pre-modulated by a clipped cosine function to the longitudinal
+density profile, with a period matching the wavelength, $\lambda_p$, of the plasma. The length was limited to
+$26\cdot\lambda_p$, and the electron beam injected after the 20th micro-bunch \cite{berglyd_olsen:2015}. We performed
+several parameter scans with this setup, testing for optimal charge as well as beam length
+\cite{adli:2016, berglyd_olsen:2016}.
 
 [Add something about the optimal results]
 
-In order to evaluate the quality of the beam, we also needed to study its emittance. Full PIC codes like Osiris are voulnerable to numerical growth of emittance caused by the ``numerical Cherenkov effect'' \cite{godfrey:1974}. This is a know issue with the Yee EMF solver, which causes the phase velocity of electromagnetic fields to be lowet than $c$, while the beam moves very close to $c$. The effect can be mitigated somewhat by a the Lehe solver \cite{lehe:2013}, but the effect is still prominent in the the high density regions of the electron beam.
+In order to evaluate the quality of the beam, we also needed to study its emittance. Full PIC codes like Osiris are
+voulnerable to numerical growth of emittance caused by the ``numerical Cherenkov effect'' \cite{godfrey:1974}. This is a
+know issue with the Yee EMF solver, which causes the phase velocity of electromagnetic fields to be lowet than $c$,
+while the beam moves very close to $c$. The effect can be mitigated somewhat by a the Lehe solver \cite{lehe:2013}, but
+the effect is still prominent in the the high density regions of the electron beam.
 
-In order to study the emittance evolution of the beam we used QuickPIC, a fully relativistic 3D PIC code \cite{huang:2006, an:2013}.
+In order to study the emittance evolution of the beam we used QuickPIC, a fully relativistic 3D PIC code
+\cite{huang:2006, an:2013}.
 
 \subsection[\label{S:M:Setup}]{Simulationn Setup}
 
@@ -69,6 +88,6 @@ In order to study the emittance evolution of the beam we used QuickPIC, a fully 
 
 \bibliography{Bibliography}
 
-% ************************************************************************************************ %
+% ******************************************************************************************************************** %
 \end{document}
-% ************************************************************************************************ %
+% ******************************************************************************************************************** %
