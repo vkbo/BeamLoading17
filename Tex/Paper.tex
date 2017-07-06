@@ -12,6 +12,49 @@
 \begin{document}
 % ******************************************************************************************************************** %
 
+%~ Eric's Comments
+%~ Sec N: Beam loading [in this section we describe the interesting physics, based on a single parameters set]
+%~ - describe proton beam wake structure [similar to that of a modulated proton beam] (simulation results to show:
+%~   unloaded wake)
+%~ - by varying the current of the electron beam, the electron beam may load the wake and the longitudinal field can be
+%~   flatten and energy spread reduced [well known result, Tzoufras] 
+%~ - the electron beam blows out the remaining plasma electrons. The transverse fields are dominated by the linear
+%~   focusing fields originating from the ion background, leading to emittance preservation of the part of the electron
+%~   beam inside the bubble [loading of a quasi-linear wake, and still get emittance preservation: this is new]
+%~   (simulation results to show: loaded wake, with bubble - many different aspects of this, trans., long. field,
+%~   electron densities etc. )
+%~ - the acceleration and the transverse emittance stable on long timescales (simulation results to show: transverse and
+%~   longitudinal phase spaces, space long simulation)
+%~ - in this regime, emittance preservation is robustness to drive-witness offset [this is new] (simulation results to
+%~   show: transverse and longitudinal phase spaces, long offset simulation)
+%~ Sec N+1: Parameter optimization, or, parameter scaling [in this section we describe how to optimize the electron
+%~ beam, and preferably some scalings]
+%~ - how to select electron beam parameters:
+%~ - longitudinal parameters bunch length and current (simulations results to show: overloaded/underloaded cases)
+%~ - transverse parameters of electron emittance / matching [too large, outside bubble.  Do we see increased head
+%~   erosion -> faster decay]?  (simulations results to show: evolution of high emittance vs low emittance cases)
+%~ (- plasma density?)
+
+
+%~ Patric's Comments
+%~ - Self-modulation as a driver
+%~ - SM does not reach blow out
+%~ - SM does not preserve emittance and produces large energy spread and parameters may evolve along the accelerator,
+%~   not desirable
+%~ - Beam loading for narrow energy spread
+%~ - Beam loading in linear regime (old papers from SLAC in the 80's, then Katsouleas for PWFA) and nonlinear regime
+%~   (Tzoufras) well know
+%~ - Propose "new regime" in the SM case, beam loading and blowout to get emittance preservation
+%~ - Limitation as for PWFA driver, must use some of the W bunch to reach the blowout, it is kind of like the early SLAC
+%~   experiments (84GeV) where the W-bunch is like the D-bunch in these experiments, but in a plasma prepared by the p+
+%~   bunch and the SM
+%~ - maybe also something about the fact that 200pC in a 60µm bunch corresponds to a 1kA current, much larger than the
+%~   p+ bunch current, because of the fact that the wakefields are driven my multiple bunches?
+%~ As for N+2, I am a firm supporter of on-axis injection ... and most of the issue with that has to do with the plasma
+%~ ramp, otherwise it would be a non-issue (assuming of course that one can split the plasma in two sections). It is in
+%~ itself a topic of research, so I think we can only state a few things ...
+
+
 \title{Emittance preservation of an electron bunch in a loaded quasi-linear plasma wakefield}
 
 \author{Veronica K. Berglyd Olsen}
@@ -29,8 +72,8 @@
 \begin{abstract}
 We investigate beam loading and emittance preservation for a high-charge electron beam being accelerated in quasi-linear
 plasma wakefield driven by a short proton beam. The structure of the wakefield is similar to that of a long, modulated
-proton beam. By selecting transverse and longitudinal electron beam parameters in order to  appropriately load of the
-wake, we show that the bulk of the electron beam can be accelerated without significant emittance growth.
+proton beam. By selecting transverse and longitudinal electron beam parameters in order to appropriately load the wake,
+we show that the bulk of the electron beam can be accelerated without significant emittance growth.
 \end{abstract}
 
 \maketitle
@@ -76,9 +119,43 @@ In order to study the emittance evolution of the beam we used QuickPIC, a fully 
 
 
 
-\section[\label{S:BL}]{Beam loading}
+\section[\label{S:BL}]{Beam Loading}
 
-% discussion of the main physics and results; beam loading, bubble creation, emittance preservation
+%~ Eric's Comments
+%~ Sec N: Beam loading [in this section we describe the interesting physics, based on a single parameters set]
+
+%~ - describe proton beam wake structure [similar to that of a modulated proton beam] (simulation results to show:
+%~   unloaded wake)
+The structure of the single drive beam set-up behaves similarly to the self-modulated case. However, since the drive
+beam is prevented from significant evolution in this simulation set-up, we are presented with an idealised case where
+the electron witness beam sees consistent fields.
+
+
+%~ - by varying the current of the electron beam, the electron beam may load the wake and the longitudinal field can be
+%~   flatten and energy spread reduced [well known result, Tzoufras]
+
+
+
+%~ - the electron beam blows out the remaining plasma electrons. The transverse fields are dominated by the linear
+%~   focusing fields originating from the ion background, leading to emittance preservation of the part of the electron
+%~   beam inside the bubble [loading of a quasi-linear wake, and still get emittance preservation: this is new]
+%~   (simulation results to show: loaded wake, with bubble - many different aspects of this, trans., long. field,
+%~   electron densities etc. )
+%~ - the acceleration and the transverse emittance stable on long timescales (simulation results to show: transverse and
+%~   longitudinal phase spaces, space long simulation)
+%~ - in this regime, emittance preservation is robustness to drive-witness offset [this is new] (simulation results to
+%~   show: transverse and longitudinal phase spaces, long offset simulation)
+
+\section[\label{S:PO}]{Parameter Optimisation}
+
+%~ Sec N+1: Parameter optimization, or, parameter scaling [in this section we describe how to optimize the electron
+%~ beam, and preferably some scalings]
+%~ - how to select electron beam parameters:
+%~ - longitudinal parameters bunch length and current (simulations results to show: overloaded/underloaded cases)
+%~ - transverse parameters of electron emittance / matching [too large, outside bubble.  Do we see increased head
+%~   erosion -> faster decay]?  (simulations results to show: evolution of high emittance vs low emittance cases)
+%~ (- plasma density?)
+
 
 \section[\label{S:D}]{Discussion}
 \section[\label{S:C}]{Conclusion}
