@@ -6,7 +6,9 @@
 %%
 
 \documentclass[aps,prstab,reprint,amsmath,amssymb,groupedaddress]{revtex4-1}
-\bibliographystyle{apsrev}
+\bibliographystyle{apsrev4-1}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, citecolor=blue, urlcolor=blue, linkcolor=blue}
 
 % ******************************************************************************************************************** %
 \begin{document}
@@ -107,7 +109,7 @@ several parameter scans with this setup, testing for optimal charge as well as b
 [Add something about the optimal results]
 
 In order to evaluate the quality of the beam, we also needed to study its emittance. Full PIC codes like Osiris are
-voulnerable to numerical growth of emittance caused by the ``numerical Cherenkov effect'' \cite{godfrey:1974}. This is a
+vulnerable to numerical growth of emittance caused by the ``numerical Cherenkov effect'' \cite{godfrey:1974}. This is a
 know issue with the Yee EMF solver, which causes the phase velocity of electromagnetic fields to be lowet than $c$,
 while the beam moves very close to $c$. The effect can be mitigated somewhat by a the Lehe solver \cite{lehe:2013}, but
 the effect is still prominent in the the high density regions of the electron beam.
@@ -115,9 +117,11 @@ the effect is still prominent in the the high density regions of the electron be
 In order to study the emittance evolution of the beam we used QuickPIC, a fully relativistic 3D PIC code
 \cite{huang:2006, an:2013}.
 
-\subsection[\label{S:M:Setup}]{Simulationn Setup}
+\subsection[\label{S:M:Setup}]{Simulation Setup}
 
-
+In these simulations we use a single proton drive bunch that sets up a wakefield comparable to that which we expect to
+see from the self-modulated SPS beam. This was done both to reduce simulation time, as we run 3D simulations, and to
+create a stable environment for the witness beam.
 
 \section[\label{S:BL}]{Beam Loading}
 
@@ -141,8 +145,14 @@ the electron witness beam sees consistent fields.
 %~   beam inside the bubble [loading of a quasi-linear wake, and still get emittance preservation: this is new]
 %~   (simulation results to show: loaded wake, with bubble - many different aspects of this, trans., long. field,
 %~   electron densities etc. )
+
+
+
 %~ - the acceleration and the transverse emittance stable on long timescales (simulation results to show: transverse and
 %~   longitudinal phase spaces, space long simulation)
+
+
+
 %~ - in this regime, emittance preservation is robustness to drive-witness offset [this is new] (simulation results to
 %~   show: transverse and longitudinal phase spaces, long offset simulation)
 
