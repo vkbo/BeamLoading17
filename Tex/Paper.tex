@@ -98,19 +98,22 @@ we show that the bulk of the electron beam can be accelerated without significan
 
 \maketitle
 
+% ******************************************************************************************************************** %
 \section[\label{S:I}]{Introduction}
-
 % interested from SMI/AWAKE
 % requirements for AWAKE Run 2
+% ******************************************************************************************************************** %
 
 The preliminary design of AWAKE Run 2 proposes to use two plasma sections. The first section of 4m is the SMI stage. The
 electron beam will be injected into the modulated proton beam before stage two, where acceleration will occur. As the
 $e_z$ field will decrease due to the gap between the two cells, it is desireable to keep this as short as possible
 \cite{adli:2016}.
 
+% ******************************************************************************************************************** %
 \section[\label{S:M}]{Method}
 %- explain analogy of short-bunch, SMI case, by referring to earlier Veronica-papers
 %- simulation setup PIC/quickpic OS
+% ******************************************************************************************************************** %
 
 The main focus of this study has been on the beam loading of the electron beam. In order to eliminate other factors that
 may affect this, we have tried several approaches to create a stable drive beam structure based on previous SMI studies
@@ -135,7 +138,9 @@ the effect is still prominent in the the high density regions of the electron be
 In order to study the emittance evolution of the beam we used QuickPIC, a fully relativistic 3D PIC code
 \cite{huang:2006, an:2013}.
 
+% ******************************************************************************************************************** %
 \subsection[\label{S:M:Setup}]{Drive Beam Parameters}
+% ******************************************************************************************************************** %
 
 In these simulations we use a single proton drive bunch that sets up a wakefield comparable to that which we expect to
 see from the self-modulated SPS beam in AWAKE. The baseline AWAKE drive beam contains $3\nexp{11}$ protons
@@ -155,7 +160,9 @@ The basline AWAKE drive beam current is insufficient to produce a plasma bubble.
 around $65\%$ of nominal plasma density at the injection point of the electron beam. This condition is replicated in out
 single bunch case. The single bunch setup also uses the baseline proton energy $W_{pb} = 400\unit{GeV}$.
 
+% ******************************************************************************************************************** %
 \subsection[\label{S:M:Setup}]{Witness Beam Parameters}
+% ******************************************************************************************************************** %
 
 The witness beam in our simulation differs from AWAKE baseline parameters on several key points. Initial beam energy is
 set such that $\gamma_{eb} = \gamma_{pb} = 426.3$. This is to eliminate the problem of initial de-phasing of the witness
@@ -173,25 +180,29 @@ density. The relation is given by
 where $\lambda_{p}$ is the plasma wavelength. In these simulations we have used matched beams for emittances between
 $2$ and $6\unit{\mu m}$.
 
+% ******************************************************************************************************************** %
 \section[\label{S:BL}]{Beam Loading}
+%~ Eric's Comments
+%~ Sec N: Beam loading [in this section we describe the interesting physics, based on a single parameters set]
+% ******************************************************************************************************************** %
 
 \begin{figure}[hbt]
     \includegraphics[width=0.99\linewidth,trim={4mm 0mm 4mm 0mm},clip]{figures/beamLoading}
     \label{Fig:BeamLoading}
     \caption{Comparison between the unloaded longitudinal e-field (no witness beam) and the loaded e-field along the
         axis. The magnitude of the beam density along the axis is shown for reference. The beams travel towards the
-        left. $\xi = z - tc$ is the position in the simulation box. The beam density is in units of plasma density
-        $n_{0} = 7\nexp{-14}\unit{cm}^{-3}$.}
+        left. $\xi = z - tc$ is the position in the simulation box. The beam density is in units of initial plasma
+        density $n_{0} = 7\nexp{-14}\unit{cm}^{-3}$. The bottom plot shows the plasma density for the loaded and
+        unloaded case. The plasma depletion region behind the proton bunch has a minimum of $67.4\%$ of $n_{0}$. }
 \end{figure}
 
 \begin{figure}[hbt]
     \includegraphics[width=0.99\linewidth,trim={4mm 0mm 4mm 0mm},clip]{figures/plasmaDenTWake}
     \label{Fig:PlasmaDenTWake}
-    \caption{}
+    \caption{The plasma density in grey with the proton beam (blue) and the electron beam (red) superimposed. The line
+        plot indicates the transverse wakefield $W_{x}(\xi,x) = E_{\xi}(z,x) - B_{y}(\xi,x)$ evaluated at
+        $+1\sigma_{eb}$ from the axis.}
 \end{figure}
-
-%~ Eric's Comments
-%~ Sec N: Beam loading [in this section we describe the interesting physics, based on a single parameters set]
 
 %~ - describe proton beam wake structure [similar to that of a modulated proton beam] (simulation results to show:
 %~   unloaded wake)
@@ -225,8 +236,8 @@ the electron witness beam sees consistent fields.
 %~ - in this regime, emittance preservation is robustness to drive-witness offset [this is new] (simulation results to
 %~   show: transverse and longitudinal phase spaces, long offset simulation)
 
+% ******************************************************************************************************************** %
 \section[\label{S:PO}]{Parameter Optimisation}
-
 %~ Sec N+1: Parameter optimization, or, parameter scaling [in this section we describe how to optimize the electron
 %~ beam, and preferably some scalings]
 %~ - how to select electron beam parameters:
@@ -234,16 +245,20 @@ the electron witness beam sees consistent fields.
 %~ - transverse parameters of electron emittance / matching [too large, outside bubble.  Do we see increased head
 %~   erosion -> faster decay]?  (simulations results to show: evolution of high emittance vs low emittance cases)
 %~ (- plasma density?)
+% ******************************************************************************************************************** %
 
-
-\section[\label{S:D}]{Discussion}
-\section[\label{S:C}]{Conclusion}
-
-% discussion of optimal electron beam parameters
-% implications for AWAKE Run 2
-
-\bibliography{Bibliography}
 
 % ******************************************************************************************************************** %
+\section[\label{S:D}]{Discussion}
+% ******************************************************************************************************************** %
+
+% ******************************************************************************************************************** %
+\section[\label{S:C}]{Conclusion}
+% discussion of optimal electron beam parameters
+% implications for AWAKE Run 2
+% ******************************************************************************************************************** %
+
+% ******************************************************************************************************************** %
+\bibliography{Bibliography}
 \end{document}
 % ******************************************************************************************************************** %
