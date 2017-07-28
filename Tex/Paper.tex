@@ -230,7 +230,7 @@ The baseline AWAKE drive beam current is insufficient to reach the non-linear re
 plasma electrons are depleted to around $65\%$ of nominal plasma density at the injection point of the electron beam.
 This condition is replicated in out single bunch case as the peak density of the drive beam is $0.83\cdot n_{0}$. The
 single bunch setup uses the baseline proton energy $W_{pb} = 400\unit{GeV}$, and retains the transverse size
-$\sigma_{r} = k_{pe}$. The length of the bunch $\sigma_{z} = 40\unit{\mu m}$.
+$\sigma_{r} = k_{pe} = 200\unit{\mu m}$. The length of the bunch $\sigma_{z} = 40\unit{\mu m}$.
 
 % ******************************************************************************************************************** %
 \subsection[\label{S:M:Setup}]{Witness Beam Parameters}
@@ -239,10 +239,10 @@ $\sigma_{r} = k_{pe}$. The length of the bunch $\sigma_{z} = 40\unit{\mu m}$.
 The witness beam in our simulation differs from AWAKE baseline parameters on several key points. Initial beam energy is
 set such that $\gamma_{eb} = \gamma_{pb} = 426.3$. This was done to eliminate the problem of initial de-phasing of the
 witness beam. AWAKE baseline energy for the long witness beam for Run 1 is $W_{eb} = 10-20\unit{MeV}$
-\cite{gschwendtner:2016}. Beam loading of a short witness beam is sensitive to initial position. AWAKE Run 2 will likely
-require a higher initial energy, but a $W_{eb} = 30-50\unit{MeV}$ is sufficient to minimise de-phasing as the drift
-$\Delta\xi \propto \gamma^{-2}$ \cite{berglyd_olsen:2015}. For this case we have eliminated it entirely in order to
-reduce the number of variables in our parameter scans.
+\cite{gschwendtner:2016}. Beam loading of a short witness beam is sensitive to its position relative to the field
+\cite{tzoufras:2009}. AWAKE Run 2 will likely require a higher initial energy, but a $W_{eb} = 30-50\unit{MeV}$ is
+sufficient to minimise de-phasing as the drift $\Delta\xi \propto \gamma^{-2}$ \cite{berglyd_olsen:2015}. For this case
+we have eliminated it entirely in order to reduce the number of variables in our parameter scans.
 
 Earlier simulations with witness beam $\sigma_{r} = 100\unit{\mu m}$ caused the beam radius to undergo rapid transverse
 evolution as the beam enters the plasma, reducing its $\sigma_{r}$ from $100\unit{\mu m}$ to $< 10\unit{\mu m}$
@@ -272,17 +272,18 @@ $2$ and $6\unit{\mu m}$, corresponding to $\sigma_{r}$ ranging from $5.25\unit{\
 % ******************************************************************************************************************** %
 
 \begin{figure}[hbt]
-    \includegraphics[width=0.99\linewidth,trim={4mm 0mm 4mm 0mm},clip]{figures/beamLoading}
-    \caption{\label{Fig:BeamLoading} Comparison between the unloaded longitudinal e-field (no witness beam) and the
-        loaded e-field along the axis. The magnitude of the beam density along the axis is shown for reference. The
-        beams travel towards the left. $\xi = z - tc$ is the position in the simulation box. The beam density is in
-        units of initial plasma density $n_{0} = 7\nexp{-14}\unit{cm}^{-3}$. The bottom plot shows the plasma density
-        for the loaded and unloaded case. The plasma depletion region behind the proton bunch has a minimum of $67.4\%${}
-        of $n_{0}$. }
+    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamLoading}
+    \caption{\label{Fig:BeamLoading} The top plot compares the unloaded longitudinal e-field (no witness beam, blue.
+        dashed  line) and the loaded e-field (blue line) along the beam axis. The magnitude of the beam density along
+        the axis is shown (red line) for reference. The bottom plot compares the plasma density along the beam axis for
+        a drive beam with no witness beam (dashed green line), witness beam with no drive beam (dash-dotted green line),
+        and both witness and drive beam present (continuous green line). $\xi = z - tc$ is the position in the
+        simulation box and both beams travel towards the left. The beam and plasma densities arein units of initial
+        plasma density $n_{0} = 7\nexp{-14}\unit{cm}^{-3}$.}
 \end{figure}
 
 \begin{figure}[hbt]
-    \includegraphics[width=0.99\linewidth,trim={4mm 0mm 4mm 0mm},clip]{figures/plasmaDenTWake}
+    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/plasmaDenTWake}
     \caption{\label{Fig:PlasmaDenTWake} The plasma density in grey with the proton beam (blue) and the electron beam
         (red) superimposed. The line plot indicates the transverse wakefield gradient $dW_{x}/dx$ where
         $W_{x} = E_{x} - v_{b} B_{y}$, evaluated along the beam axis.}
@@ -293,17 +294,21 @@ $2$ and $6\unit{\mu m}$, corresponding to $\sigma_{r}$ ranging from $5.25\unit{\
 
 The single drive beam setup is designed to behave similarly to the self-modulated case. However, since the drive beam is
 prevented from significant transverse evolution, we are presented with an idealised case where the electron witness beam
-sees consistent fields. The field generated by the proton drive bunch is seen as the dotted line in figure
-\ref{Fig:BeamLoading}. With a proton beam density $n_{pb} \simeq n_{0}$, we are in the quasi-linear regime but near
-non-linear \cite{rosenzweig:2010}. There is some depletion of plasma electrons, but not enough to form a bubble. The
-dotted green line in the lower part of figure \ref{Fig:BeamLoading} shows that the on-axis plasma density has a
-depletion of $67\%$.
+sees consistent fields throughout the plasma stage. The field generated by the proton drive bunch is seen as the dotted
+line in figure \ref{Fig:BeamLoading}. With a proton beam density $n_{pb} \simeq n_{0}$, we are in the quasi-linear
+regime but near non-linear \cite{rosenzweig:2010}. There is some depletion of plasma electrons, but not enough to form a
+bubble. The dashed green line in the lower part of figure \ref{Fig:BeamLoading} shows that the on-axis plasma density
+has a depletion of $67\%$.
 
 %~ - by varying the current of the electron beam, the electron beam may load the wake and the longitudinal field can be
 %~   flatten and energy spread reduced [well known result, Tzoufras]
 
-
-
+The witness bunch generates its own wakefield, which in the accelerating phase cancels out the $E_{z}$ field generated
+by the drive bunch. For a finite length bunch this causes the particles in the tail of the witness bunch to be
+accelerated less than those at the front resulting in high energy spread in exchange for high energy transfer
+\cite{van_der_meer:1985}. Since $E_{z} \propto \rho_{b}$, a beam profile $\rho_{b}(\xi)$ that perfectly flattens the
+accelerating field within the witness beam, reduces energy spread to zero. The ideal shape is triangular or trapezoidal
+with the peak density in the direction of the beam velocity \cite{katsouleas:1987, tzoufras:2009}.
 
 %~ - the electron beam blows out the remaining plasma electrons. The transverse fields are dominated by the linear
 %~   focusing fields originating from the ion background, leading to emittance preservation of the part of the electron
@@ -311,7 +316,28 @@ depletion of $67\%$.
 %~   (simulation results to show: loaded wake, with bubble - many different aspects of this, trans., long. field,
 %~   electron densities etc. )
 
+For Gaussian beams a reasonable flat field and consequently low energy spread can be achieved by controlling the charge
+density. In our case, with a matched beam to the plasma density \ref{EQ:Matched}, we are limited on how much total
+charge we can accelerate. The test case shown in figures \ref{Fig:BeamLoading} and \ref{Fig:PlasmaDenTWake} has a total
+charge of $100\unit{pC}$ with a $\sigma_{r}=5.23\unit{\mu m}$ matching an initial normalised emittance
+$\epsilon_{0} = 2\unit{\mu m}$.
 
+\begin{figure}[hbt]
+    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamPhaseSpace}
+    \caption{\label{Fig:BeamPS} Phase space charge distribution of a $100\unit{pC}$, $60\unit{\mu m}$ long witness beam
+        after $4\unit{m}$ of plasma. Mean momentum is $1.67\unit{GeV/c}$ with an RMS spread of $87\unit{MeV/c}$
+        ($5.2\%$) for the full beam.}
+\end{figure}
+
+As illustrated in figure \ref{Fig:BeamPS}, our base case of a $100\unit{pC}$, $60\unit{\mu m}$ long witness beam indeed
+shows a difference in energy transfer to the tail of the beam. Also the front of the beam has a large tail in momentum
+space. The positioning of the witness beam is chosen to put the bulk of the charge as close to the peak accelerating
+field as possible, as can be seen in figure \ref{Fig:BeamLoading}.
+
+Due to the high charge density resulting from a very narrow beam, the witness beam's own wakefield reaches the full
+non-linear regime with $n_{eb} \approx 35\times n_{0}$. The plasma region reaches full depletion close to the peak of
+the electron beam, which in turn generates strong focusing fields, with gradients of $20\unit{kT/m}$ near the beam axis
+(see figure \ref{Fig:PlasmaDenTWake}).
 
 %~ - the acceleration and the transverse emittance stable on long timescales (simulation results to show: transverse and
 %~   longitudinal phase spaces, space long simulation)
@@ -342,6 +368,19 @@ depletion of $67\%$.
 % discussion of optimal electron beam parameters
 % implications for AWAKE Run 2
 % ******************************************************************************************************************** %
+
+\section[\label{Ack}]{Acknowledgements}
+% ******************************************************************************************************************** %
+
+The simulations forming the basis for this study have been made possible using the open source version of QuickPIC
+released in early 2017 and owned by UCLA.
+
+These numerical simulations have been made possible through access to the Abel computing cluster in Oslo, Norway
+maintained by UNINETT Sigma2 AS and financed by the Research Council of Norway, the University of Bergen, the University
+of Oslo, the University of Tromsø and the Norwegian University of Science and Technology. Project code: nn9303k.
+
+The authors would also like to acknowledge the OSIRIS Consortium for providing access to the OSIRIS framework. OSIRIS
+was used extensively for simulations leading up to the work presented in this paper.
 
 % ******************************************************************************************************************** %
 \bibliography{Bibliography}
