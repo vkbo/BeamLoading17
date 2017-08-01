@@ -249,7 +249,7 @@ evolution as the beam enters the plasma, reducing its $\sigma_{r}$ from $100\uni
 \cite{berglyd_olsen:2016}. This is due to a mismatch between beam emittance and the plasma density. This relation is
 given by
 \begin{align}
-    \beta = \frac{\sigma_r^2}{\epsilon_g} = \frac{\lambda_p}{2\pi}\sqrt{2\gamma_{rel}}, \label{EQ:Matched}
+    \beta = \frac{\sigma_r^2}{\epsilon_g} = \frac{\lambda_pe}{2\pi}\sqrt{2\gamma_{rel}}, \label{EQ:Matched}
 \end{align}
 where $\lambda_{p}$ is the plasma wavelength. In these simulations we have used matched beams for emittances between
 $2$ and $6\unit{\mu m}$, corresponding to $\sigma_{r}$ ranging from $5.25\unit{\mu m}$ to $9.09\unit{\mu m}$.
@@ -316,18 +316,18 @@ with the peak density in the direction of the beam velocity \cite{katsouleas:198
 %~   (simulation results to show: loaded wake, with bubble - many different aspects of this, trans., long. field,
 %~   electron densities etc. )
 
-For Gaussian beams a reasonable flat field and consequently low energy spread can be achieved by controlling the charge
-density. In our case, with a matched beam to the plasma density \ref{EQ:Matched}, we are limited on how much total
-charge we can accelerate. The test case shown in figures \ref{Fig:BeamLoading} and \ref{Fig:PlasmaDenTWake} has a total
-charge of $100\unit{pC}$ with a $\sigma_{r}=5.23\unit{\mu m}$ matching an initial normalised emittance
-$\epsilon_{0} = 2\unit{\mu m}$.
-
 \begin{figure}[hbt]
     \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamPhaseSpace}
     \caption{\label{Fig:BeamPS} Phase space charge distribution of a $100\unit{pC}$, $60\unit{\mu m}$ long witness beam
         after $4\unit{m}$ of plasma. Mean momentum is $1.67\unit{GeV/c}$ with an RMS spread of $87\unit{MeV/c}$
         ($5.2\%$) for the full beam.}
 \end{figure}
+
+For Gaussian beams a reasonable flat field and consequently low energy spread can be achieved by controlling the charge
+density. In our case, with a matched beam to the plasma density defined by equation \ref{EQ:Matched}, we are limited on
+how much total charge we can accelerate. The test case shown in figures \ref{Fig:BeamLoading} and
+\ref{Fig:PlasmaDenTWake} has a total charge of $100\unit{pC}$ with a $\sigma_{r}=5.23\unit{\mu m}$ matching an initial
+normalised emittance $\epsilon_{0} = 2\unit{\mu m}$.
 
 As illustrated in figure \ref{Fig:BeamPS}, our base case of a $100\unit{pC}$, $60\unit{\mu m}$ long witness beam indeed
 shows a difference in energy transfer to the tail of the beam. Also the front of the beam has a large tail in momentum
@@ -342,7 +342,30 @@ the electron beam, which in turn generates strong focusing fields, with gradient
 %~ - the acceleration and the transverse emittance stable on long timescales (simulation results to show: transverse and
 %~   longitudinal phase spaces, space long simulation)
 
+\begin{figure*}[hbt]
+    \includegraphics[width=0.495\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamEmittance}
+    \includegraphics[width=0.495\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamEmittanceOffset}
+    \caption{\label{Fig:BeamEmitt} The red lines show a moving window calculation of transverse normalised emittance for
+        an on-axis beam with respect to the drive beam axis (left) and an offset beam (right) with an offset of one
+        $\sigma_{x}$ in the x plane. The moving window for emittance calculation is longitudinal slices of
+        $l = 4\times\Delta\xi = 18.75\unit{\mu m}$ with a $\Delta\xi$ resolution. Only slices with more than $100$ macro
+        particles have been included, which accounts for the abrupt edge as well as the noise at either end of the beam
+        due to low statistics. The blue lines show the peak electron beam density profile. For reference, the plasma 
+        density profile is included in green, but scaled up by a factor of $100$ to be visible. The solid lines are at
+        the plasma entry point, the dashed lines after $4\unit{m}$ of plasma, the dash-dotted after $40\unit{m}$, and
+        the dotted after $100\unit{m}$. In order to sustain a stable accelerating field for the witness beam, these
+        simulations were run with an LHC energy drive beam of $7\unit{TeV}$ to avoid dephasing which causes the
+        structure to brake down after about $50\unit{m}$.}
+\end{figure*}
 
+The witness beam's self-generated bubble prevents the tailing end of the beam to see any measurable emittance growth.
+For the majority of the cases we studied that maintained a stable accelerating structure, about $70\%$ of the beam
+retained its initial emittance. Figure \ref{Fig:BeamEmitt} shows the $100\unit{pC}$ and $\sigma_{z} = 60\unit{\mu m}$
+case extended to a $100\unit{m}$ plasma case and the drive beam energy increased to $7\unit{TeV}$ (LHC energy) to
+prevent dephasing, which for the SPS beam case starts to become significant after about $50\unit{m}$.
+
+The on-axis density of the electron beam increases as its gamma factor increases and its transverse size decreases. The
+beam radius follows the matched beam equation \ref{EQ:Matched} with $\lambda_{pe} = \lambda_{0}$.
 
 %~ - in this regime, emittance preservation is robustness to drive-witness offset [this is new] (simulation results to
 %~   show: transverse and longitudinal phase spaces, long offset simulation)
@@ -361,23 +384,24 @@ the electron beam, which in turn generates strong focusing fields, with gradient
 
 % ******************************************************************************************************************** %
 \section[\label{S:D}]{Discussion}
+% discussion of optimal electron beam parameters
+% implications for AWAKE Run 2
 % ******************************************************************************************************************** %
 
 % ******************************************************************************************************************** %
 \section[\label{S:C}]{Conclusion}
-% discussion of optimal electron beam parameters
-% implications for AWAKE Run 2
 % ******************************************************************************************************************** %
 
 \section[\label{Ack}]{Acknowledgements}
 % ******************************************************************************************************************** %
 
-The simulations forming the basis for this study have been made possible using the open source version of QuickPIC
-released in early 2017 and owned by UCLA.
+The simulations for this study have been run using the open source version of QuickPIC released in early 2017 and owned
+by UCLA.
 
-These numerical simulations have been made possible through access to the Abel computing cluster in Oslo, Norway
-maintained by UNINETT Sigma2 AS and financed by the Research Council of Norway, the University of Bergen, the University
-of Oslo, the University of Tromsø and the Norwegian University of Science and Technology. Project code: nn9303k.
+These numerical simulations have been made possible through access to the Abel computing cluster in Oslo, Norway. Abel
+is maintained by UNINETT Sigma2 AS and financed by the Research Council of Norway, the University of Bergen, the
+University of Oslo, the University of Tromsø and the Norwegian University of Science and Technology. Project code for
+this work is nn9303k.
 
 The authors would also like to acknowledge the OSIRIS Consortium for providing access to the OSIRIS framework. OSIRIS
 was used extensively for simulations leading up to the work presented in this paper.
