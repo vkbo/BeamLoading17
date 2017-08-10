@@ -335,8 +335,8 @@ with the peak density in the direction of the beam velocity \cite{katsouleas:198
         the plasma density profile is included in green, but scaled up by a factor of $100$ to be visible. The solid
         lines are at the plasma entry point, the dashed lines after $4\unit{m}$ of plasma, the dash-dotted after
         $40\unit{m}$, and the dotted after $100\unit{m}$. In order to sustain a stable accelerating field for the
-        witness beam, these simulations were run with an LHC energy drive beam of $7\unit{TeV}$ to avoid dephasing which
-        causes the structure to brake down after about $50\unit{m}$.}
+        witness beam, these simulations were run with an LHC energy drive beam of $7\unit{TeV}$ to avoid de-phasing
+        which causes the structure to break down after about $50\unit{m}$.}
 \end{figure*}
 
 \begin{figure*}[hbt]
@@ -352,8 +352,8 @@ with the peak density in the direction of the beam velocity \cite{katsouleas:198
     %~ \includegraphics[height=26.0mm,trim={10mm 0.1mm 15mm 2mm},clip]{figures/beamOffsetRMS}
     \caption{\label{Fig:BeamFilament} The left plots show the transverse phase space of the electron beam at different
         plasma position. The Right side shows the macro particle mean position (top) and RMS spread (bottom). The blue
-        particles and lines represent particles with position $1.40 < \xi < 1.42$. The red particles and lines
-        represent particles with position $1.55 < \xi < 1.57$.}
+        particles and lines represent particles with position $1.40\unit{\mu m} < \xi < 1.42\unit{\mu m}$. The red
+        particles and lines represent particles with position $1.55\unit{\mu m} < \xi < 1.57\unit{\mu m}$.}
 \end{figure*}
 
 For Gaussian beams a reasonable flat field and consequently low energy spread can be achieved by controlling the charge
@@ -362,24 +362,27 @@ how much total charge we can accelerate. The test case shown in figures \ref{Fig
 \ref{Fig:PlasmaDenTWake} has a total charge of $100\unit{pC}$ with a $\sigma_{r}=5.23\unit{\mu m}$ matching an initial
 normalised emittance $\epsilon_{0} = 2\unit{\mu m}$.
 
-As illustrated in figure \ref{Fig:BeamPS}, our base case of a $100\unit{pC}$, $60\unit{\mu m}$ long witness beam indeed
-shows a difference in energy transfer to the tail of the beam. Also the front of the beam has a large tail in momentum
-space. The positioning of the witness beam is chosen to put the bulk of the charge as close to the peak accelerating
-field as possible, as can be seen in figure \ref{Fig:BeamLoading}.
+As illustrated in figure \ref{Fig:BeamPS}, our base case of a $100\unit{pC}$, $60\unit{\mu m}$ long witness beam, as
+expected, shows a difference in energy transfer to the tail of the beam compared to the centre where the $E_{z}$-field
+is nearly flat. Also the front of the beam has a large tail in momentum space corresponding to a smaller acceleration
+gradient. The positioning of the witness beam is chosen to put the bulk of the charge as close to the peak accelerating
+field as possible, but prioritising the tail end over the front as the front is in any case in the quasi-linear regime.
 
 Due to the high charge density resulting from a very narrow beam, the witness beam's own wakefield reaches the full
-non-linear regime with $n_{eb} \approx 35\times n_{0}$. The plasma region reaches full depletion close to the peak of
-the electron beam, which in turn generates strong focusing fields, with gradients of $20\unit{kT/m}$ near the beam axis
-(see figure \ref{Fig:PlasmaDenTWake}).
+non-linear regime with $n_{eb} \approx 35\times n_{0}$. The wakefield is driven by the beam's own front. The space
+charge rapidly becomes high enough to start expel plasma electrons from the beam axis, and form the characteristic
+electrons sheet that defines the blowout regime. As a result the plasma region reaches full depletion close to the peak
+of the electron beam, which in turn generates strong focusing fields, with gradients of $20\unit{kT/m}$ near the beam
+axis (see figure \ref{Fig:PlasmaDenTWake}).
 
 %~ - the acceleration and the transverse emittance stable on long timescales (simulation results to show: transverse and
 %~   longitudinal phase spaces, space long simulation)
 
-The witness beam's self-generated bubble prevents the tailing end of the beam to see any measurable emittance growth.
+The witness beam's self-generated bubble prevents the tailing end of the beam to see any significant emittance growth.
 For the majority of the cases we studied that maintained a stable accelerating structure, about $70-80\%$ of the beam
 retained its initial emittance. Figure \ref{Fig:BeamEmitt} shows the $100\unit{pC}$ and $\sigma_{z} = 60\unit{\mu m}$
 case extended to a $100\unit{m}$ plasma and the drive beam energy increased to $7\unit{TeV}$ (LHC energy) to prevent
-dephasing. Dephasing for the SPS beam case starts to become significant after about $50\unit{m}$.
+de-phasing. De-phasing for the SPS beam case starts to become significant after about $50\unit{m}$.
 
 The on-axis density of the electron beam increases as its gamma factor increases and its transverse size decreases. The
 beam radius follows the evolution given by equation \ref{EQ:Matched} with $\lambda_{pe} = \lambda_{0}$ for the section
@@ -388,16 +391,13 @@ of the beam where normalised emittance is preserved.
 %~ - in this regime, emittance preservation is robustness to drive-witness offset [this is new] (simulation results to
 %~   show: transverse and longitudinal phase spaces, long offset simulation)
 
-
-Our configuration shows robustness to electron beam transverse offset as the bubble generated by the witness beam
-wakefield follows the beam. The head of the beam does not benefit from this, and we see some defocusing in this region.
-However, since this the proton wakefield creates a quasi linear condition, we still see the head of the beam
-stabilising. The off-axis case has a larger initial emittance growth, but the growth levels off after the first few
-metres and stays constant for the remainder of the plasma accelerator section.
-
-
-
-
+Our configuration also shows some robustness to electron beam transverse offset as the bubble generated by the witness
+beam wakefield follows the beam. The head of the beam does not benefit from this effect, and we see some defocusing in
+this region (see bottom, right plot of figure \ref{Fig:BeamFilament}). However, since the proton wakefield creates a
+quasi linear condition, we still see the head of the beam stabilising (see top, right plot of figure
+\ref{Fig:BeamFilament}). The off-axis case has a larger initial emittance growth (left side plot of figure
+\ref{Fig:BeamFilament}), but the growth levels off after the first few metres and stays constant for the remainder of
+the plasma accelerator section (figure \ref{Fig:BeamEmitt}).
 
 % ******************************************************************************************************************** %
 \section[\label{S:PO}]{Parameter Optimisation}
@@ -410,6 +410,14 @@ metres and stays constant for the remainder of the plasma accelerator section.
 %~ (- plasma density?)
 % ******************************************************************************************************************** %
 
+For accelerator applications in general, and also for Run II of the AWAKE experiment, it is desirable to maximise the
+charge that can be successfully accelerated in the witness bunch. However, since longitudinally constant accelerating
+fields depend on both the position and the charge density of the witness beam \cite{katsouleas:1987, tzoufras:2009}.
+
+The large number of parameters involved makes the problem difficult to solve in simulations, and difficult to measure in
+experiments. For this study we limited ourselves to look at a range of initial emittances, which allows for a range of
+transverse beam sizes when with a fixed $\beta$-function matched to the plasma density; and a range of beam lengths with
+a maximum at the same point on the wakefield as for our reference case covered above.
 
 % ******************************************************************************************************************** %
 \section[\label{S:D}]{Discussion}
