@@ -323,6 +323,39 @@ with the peak density in the direction of the beam velocity \cite{katsouleas:198
         ($5.2\%$) for the full beam.}
 \end{figure}
 
+\begin{figure*}[hbt]
+    \includegraphics[width=0.495\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamEmittance}
+    \includegraphics[width=0.495\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamEmittanceOffset}
+    \caption{\label{Fig:BeamEmitt} The red lines show a moving window calculation of transverse normalised emittance for
+        an on-axis beam with respect to the drive beam axis (left) and an offset beam (right) with an offset of one
+        $\sigma_{x} = 5.24\unit{\mu m}$ in the x plane. The moving window for emittance calculation is longitudinal
+        slices of $l = 4\times\Delta\xi = 18.75\unit{\mu m}$ with a $\Delta\xi$ resolution. Only slices with more than
+        $100$ macro particles have been included, which accounts for the abrupt edge as well as the noise at either end
+        of the beam due to low statistics. The blue lines show the peak electron beam density profile. For reference,
+        the plasma density profile is included in green, but scaled up by a factor of $100$ to be visible. The solid
+        lines are at the plasma entry point, the dashed lines after $4\unit{m}$ of plasma, the dash-dotted after
+        $40\unit{m}$, and the dotted after $100\unit{m}$. In order to sustain a stable accelerating field for the
+        witness beam, these simulations were run with an LHC energy drive beam of $7\unit{TeV}$ to avoid dephasing which
+        causes the structure to brake down after about $50\unit{m}$.}
+\end{figure*}
+
+\begin{figure*}[hbt]
+    \includegraphics[width=\linewidth,trim={0mm 0mm 0mm 0mm},clip]{figures/beamFilamentationAll}
+    %~ \includegraphics[height=22.2mm,trim={ 0mm 9.5mm  6mm 0mm},clip]{figures/beamFilamentation01}
+    %~ \includegraphics[height=22.2mm,trim={16mm 9.5mm  6mm 0mm},clip]{figures/beamFilamentation02}
+    %~ \includegraphics[height=22.2mm,trim={16mm 9.5mm  0mm 0mm},clip]{figures/beamFilamentation03}
+    %~ \includegraphics[height=22.2mm,trim={10mm 9.5mm 15mm 0mm},clip]{figures/beamOffsetMean}
+    %~ \\
+    %~ \includegraphics[height=26.0mm,trim={ 0mm 0.1mm  6mm 2mm},clip]{figures/beamFilamentation04}
+    %~ \includegraphics[height=26.0mm,trim={16mm 0.1mm  6mm 2mm},clip]{figures/beamFilamentation05}
+    %~ \includegraphics[height=26.0mm,trim={16mm 0.1mm  0mm 2mm},clip]{figures/beamFilamentation06}
+    %~ \includegraphics[height=26.0mm,trim={10mm 0.1mm 15mm 2mm},clip]{figures/beamOffsetRMS}
+    \caption{\label{Fig:BeamFilament} The left plots show the transverse phase space of the electron beam at different
+        plasma position. The Right side shows the macro particle mean position (top) and RMS spread (bottom). The blue
+        particles and lines represent particles with position $1.40 < \xi < 1.42$. The red particles and lines
+        represent particles with position $1.55 < \xi < 1.57$.}
+\end{figure*}
+
 For Gaussian beams a reasonable flat field and consequently low energy spread can be achieved by controlling the charge
 density. In our case, with a matched beam to the plasma density defined by equation \ref{EQ:Matched}, we are limited on
 how much total charge we can accelerate. The test case shown in figures \ref{Fig:BeamLoading} and
@@ -342,22 +375,6 @@ the electron beam, which in turn generates strong focusing fields, with gradient
 %~ - the acceleration and the transverse emittance stable on long timescales (simulation results to show: transverse and
 %~   longitudinal phase spaces, space long simulation)
 
-\begin{figure*}[hbt]
-    \includegraphics[width=0.495\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamEmittance}
-    \includegraphics[width=0.495\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamEmittanceOffset}
-    \caption{\label{Fig:BeamEmitt} The red lines show a moving window calculation of transverse normalised emittance for
-        an on-axis beam with respect to the drive beam axis (left) and an offset beam (right) with an offset of one
-        $\sigma_{x} = 5.24\unit{\mu m}$ in the x plane. The moving window for emittance calculation is longitudinal
-        slices of $l = 4\times\Delta\xi = 18.75\unit{\mu m}$ with a $\Delta\xi$ resolution. Only slices with more than
-        $100$ macro particles have been included, which accounts for the abrupt edge as well as the noise at either end
-        of the beam due to low statistics. The blue lines show the peak electron beam density profile. For reference,
-        the plasma density profile is included in green, but scaled up by a factor of $100$ to be visible. The solid
-        lines are at the plasma entry point, the dashed lines after $4\unit{m}$ of plasma, the dash-dotted after
-        $40\unit{m}$, and the dotted after $100\unit{m}$. In order to sustain a stable accelerating field for the
-        witness beam, these simulations were run with an LHC energy drive beam of $7\unit{TeV}$ to avoid dephasing which
-        causes the structure to brake down after about $50\unit{m}$.}
-\end{figure*}
-
 The witness beam's self-generated bubble prevents the tailing end of the beam to see any measurable emittance growth.
 For the majority of the cases we studied that maintained a stable accelerating structure, about $70-80\%$ of the beam
 retained its initial emittance. Figure \ref{Fig:BeamEmitt} shows the $100\unit{pC}$ and $\sigma_{z} = 60\unit{\mu m}$
@@ -371,27 +388,13 @@ of the beam where normalised emittance is preserved.
 %~ - in this regime, emittance preservation is robustness to drive-witness offset [this is new] (simulation results to
 %~   show: transverse and longitudinal phase spaces, long offset simulation)
 
-\begin{figure*}[hbt]
-    \includegraphics[height=22.2mm,trim={ 0mm 9.5mm  6mm 0mm},clip]{figures/beamFilamentation01}
-    \includegraphics[height=22.2mm,trim={16mm 9.5mm  6mm 0mm},clip]{figures/beamFilamentation02}
-    \includegraphics[height=22.2mm,trim={16mm 9.5mm  0mm 0mm},clip]{figures/beamFilamentation03}
-    \includegraphics[height=22.2mm,trim={10mm 9.5mm 15mm 0mm},clip]{figures/beamOffsetMean}
-    \\
-    \includegraphics[height=26.0mm,trim={ 0mm 0.1mm  6mm 2mm},clip]{figures/beamFilamentation04}
-    \includegraphics[height=26.0mm,trim={16mm 0.1mm  6mm 2mm},clip]{figures/beamFilamentation05}
-    \includegraphics[height=26.0mm,trim={16mm 0.1mm  0mm 2mm},clip]{figures/beamFilamentation06}
-    \includegraphics[height=26.0mm,trim={10mm 0.1mm 15mm 2mm},clip]{figures/beamOffsetRMS}
-    \caption{\label{Fig:BeamFilament} The left plots show the transverse phase space of the electron beam at different
-        plasma position. The Right side shows the macro particle mean position (top) and RMS spread (bottom). The blue
-        particles and lines represent particles with position $1.40 < \xi < 1.42$. The red particles and lines
-        represent particles with position $1.55 < \xi < 1.57$.}
-\end{figure*}
 
 Our configuration shows robustness to electron beam transverse offset as the bubble generated by the witness beam
 wakefield follows the beam. The head of the beam does not benefit from this, and we see some defocusing in this region.
 However, since this the proton wakefield creates a quasi linear condition, we still see the head of the beam
 stabilising. The off-axis case has a larger initial emittance growth, but the growth levels off after the first few
 metres and stays constant for the remainder of the plasma accelerator section.
+
 
 
 
