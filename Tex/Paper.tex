@@ -135,12 +135,19 @@ a topic explored in this paper.
 % ******************************************************************************************************************** %
 
 A train of electron drive bunches with a separation $\lambda_{pe}$ and a length $l_{b} \ll \lambda_{pe}$, where
-$\lambda_{p} = 2\pi c/\omega_{pe}$ and $\omega_{pe} = (n_{0} e^{2} / m_{e} \epsilon_{0})^{1/2}$, will drive an
-increasingly strong field $E_{z}$ for each bunch \cite{chen:1985}. A tailing witness beam loading the peak accelerating
-phase of this field will quickly gain energy from the wakefield. Acceleration of an electron witness beam driven by two
-electron drive beams was demonstrated at Brookhaven National Laboratory \cite{muggli:2011}. However, electron drive
-bunches will quickly lose energy to the plasma, and the accelerating witness beam will eventually catch up with the
-drive beam and the acceleration stop.
+\begin{align}
+    \lambda_{p} = 2\pi\frac{c}{\omega_{pe}} \label{EQ:LambdaP}
+\end{align}
+and
+\begin{align}
+    \omega_{pe} = \sqrt{\frac{n_{0} e^{2}}{m_{e} \epsilon_{0}}}, \label{EQ:OmegaP}
+\end{align}
+%$\lambda_{p} = 2\pi c/\omega_{pe}$ and $\omega_{pe} = (n_{0} e^{2} / m_{e} \epsilon_{0})^{1/2}$,
+will drive an increasingly strong field $E_{z}$ for each bunch \cite{chen:1985}. A tailing witness beam loading the peak
+accelerating phase of this field will quickly gain energy from the wakefield. Acceleration of an electron witness beam
+driven by two electron drive beams was demonstrated at Brookhaven National Laboratory \cite{muggli:2011}. However,
+electron drive bunches will quickly lose energy to the plasma, and the accelerating witness beam will eventually catch
+up with the drive beam and the acceleration stop.
 
 This de-phasing problem can be minimised by instead using a proton drive bunch \cite{caldwell:2009}. Proton beams, like
 for instance the LHC and SPS beams at CERN, are ideal candidates for such an accelerator; however, they are orders of
@@ -157,7 +164,7 @@ plasma, leaving a train of proton bunches along the beam axis.
 The AWAKE experiment, currently in its first stages of operation at CERN, uses the SPS beam as its driver. The first run
 of the experiment is set up with a $10\unit{m}$ rubidium plasma cell, with a nominal plasma density of
 $7\nexp{14}\unit{cm}^{-3}$ \cite{gschwendtner:2016}. The corresponding plasma wavelength is $1.26\unit{mm}$. The plasma
-density is matched to the SPS proton beam such that $k_{pe}\sigma_{r} = 1$ where $k_{pe} = \lambda_{pe}/2\pi$ is the
+density is matched to the SPS proton beam such that $k_{pe}\sigma_{r} = 1$ where $k_{pe} = 2\pi/\lambda_{pe}$ is the
 plasma wave number. The aim of the first run is to demonstrate self-modulation of the proton beam, and in 2018 to
 sample the wake field with a long electron bunch. The study presented here is for run two, which aims to demonstrate
 acceleration of a short electron bunch producing at high energy and low emittance and low energy spread.
@@ -187,10 +194,10 @@ Our first approach was to use a pre-modulated, short proton beam with similar st
 self-modulation of the SPS beam in AWAKE. These studies were done using the full PIC code Osiris \cite{fonseca:2002}
 using 2D cylindrical-symmetric simulations. The proton beam was pre-modulated by a clipped cosine function to the
 longitudinal density profile, with a period matching $\lambda_{pe}$. Its transverse profile was kept as a Gaussian with
-$\sigma_{r} = k_{pe} = 200\unit{\mu m}$. The length of the simulation beam was limited to $26\cdot\lambda_{pe}$, and the
-electron beam injected after the 20th micro-bunch \cite{berglyd_olsen:2015}. We performed several parameter scans with
-this setup, testing for the the maximum beam charge that could be accelerated with a high energy gain and low energy
-spread \cite{adli:2016, berglyd_olsen:2016}.
+$\sigma_{r} = k_{pe}^{-1} = 200\unit{\mu m}$. The length of the simulation beam was limited to $26\cdot\lambda_{pe}$,
+and the electron beam injected after the 20th micro-bunch \cite{berglyd_olsen:2015}. We performed several parameter
+scans with this setup, testing for the the maximum beam charge that could be accelerated with a high energy gain and low
+energy spread \cite{adli:2016, berglyd_olsen:2016}.
 
 In order to evaluate the quality of the beam, we also needed to study emittance evolution. However, full PIC codes like
 Osiris are vulnerable to numerical growth of emittance caused by the ``numerical Cherenkov effect'' \cite{godfrey:1974}.
@@ -230,7 +237,7 @@ The baseline AWAKE drive beam current is insufficient to reach the non-linear re
 plasma electrons are depleted to around $65\%$ of nominal plasma density at the injection point of the electron beam.
 This condition is replicated in out single bunch case as the peak density of the drive beam is $0.83\cdot n_{0}$. The
 single bunch setup uses the baseline proton energy $W_{pb} = 400\unit{GeV}$, and retains the transverse size
-$\sigma_{r} = k_{pe} = 200\unit{\mu m}$. The length of the bunch $\sigma_{z} = 40\unit{\mu m}$.
+$\sigma_{r} = 200\unit{\mu m}$. The length of the bunch $\sigma_{z} = 40\unit{\mu m}$.
 
 % ******************************************************************************************************************** %
 \subsection[\label{S:M:Setup}]{Witness Beam Parameters}
@@ -391,12 +398,6 @@ of the beam where normalised emittance is preserved.
 %~ - in this regime, emittance preservation is robustness to drive-witness offset [this is new] (simulation results to
 %~   show: transverse and longitudinal phase spaces, long offset simulation)
 
-\begin{figure}[hbt]
-    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQuality}
-    \caption{\label{Fig:BeamQ} }
-\end{figure}
-
-
 Our configuration also shows some robustness to electron beam transverse offset as the bubble generated by the witness
 beam wakefield follows the beam. The head of the beam does not benefit from this effect, and we see some defocusing in
 this region (see bottom, right plot of figure \ref{Fig:BeamFilament}). However, since the proton wakefield creates a
@@ -416,20 +417,46 @@ the plasma accelerator section (figure \ref{Fig:BeamEmitt}).
 %~ (- plasma density?)
 % ******************************************************************************************************************** %
 
+\begin{figure}[hbt]
+    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQuality}
+    \caption{\label{Fig:BeamQ} Ratio of total beam charge with an emittance growth $\Delta\epsilon \leq 5\%$ as a
+        function of initial beam charge (blue), and relative energy spread (red), after $4\unit{m}$ of plasma and with
+        an initial emittance $\epsilon_{N,0}=2\unit{\mu m}$. These are shown for four different $\sigma_{z}$ from
+        $40\unit{\mu m}$ to $100\unit{\mu m}$. The detailed studies presented in beam loading section corrspond to the
+        square marked lines at $100\unit{pC}$.}
+\end{figure}
+
+\begin{figure}[hbt]
+    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityAbs}
+    \caption{\label{Fig:BeamQAbs} Total beam charge with an emittance growth $\Delta\epsilon \leq 5\%$ as a function of
+        initial beam charge (blue), and final momentum (red), after $4\unit{m}$ of plasma and with an initial emittance
+        $\epsilon_{N,0}=2\unit{\mu m}$.}
+\end{figure}
+
 For accelerator applications in general, and also for Run II of the AWAKE experiment, it is desirable to maximise the
 charge that can be successfully accelerated in the witness bunch. However, since longitudinally constant accelerating
 fields depend on both the position and the charge density of the witness beam \cite{katsouleas:1987, tzoufras:2009}.
 
 The large number of parameters involved makes the problem difficult to solve in simulations, and difficult to measure in
-experiments. For this study we limited ourselves to look at a range of initial emittances, which allows for a range of
-transverse beam sizes when with a fixed $\beta$-function matched to the plasma density; and a range of beam lengths with
-a maximum at the same point on the wakefield as for our reference case covered above.
+experiments. Presented in figures \ref{Fig:BeamQ} and \ref{Fig:BeamQAbs} is a parameter scan for a matched beam with
+initial normalised emittance $\epsilon_{N,0}=2\unit{\mu m}$ after propagating through $4\unit{m}$ of plasma. We ran the
+scan with beam charge from $10\unit{pC}$ to $300\unit{pC}$ and with length $\sigma_{z}$ from $40\unit{\mu m}$ to
+$100\unit{\mu m}$. We see from figure \ref{Fig:BeamQ} that both the $40\unit{\mu m}$ and the $60\unit{\mu m}$ beam has a
+well defined minimum energy spread with a beam charge $\geq 50\unit{pC}$ and $\approx 100\unit{pC}$ respectively. Lower
+beam charges tend to underload the field, while higher beam charges tend to overload. It is also clear that long beams
+with respect to the accelerating flank of the $E_{z}$-field, $\approx\lambda_{pe}/4$, will not optimally load the field
+along its length thus experiencing a larger spread in energy.
+
+A higher charge beam will generate a non-linear wakefield sooner, which in turns ensures that a smaller portion of the
+beam experiences the quasi-linear region with emittance growth. As figure \ref{Fig:BeamQAbs} illustrates, a higher
+charge also results in a lower energy gain.
 
 % ******************************************************************************************************************** %
 \section[\label{S:D}]{Discussion}
 % discussion of optimal electron beam parameters
 % implications for AWAKE Run 2
 % ******************************************************************************************************************** %
+
 
 % ******************************************************************************************************************** %
 \section[\label{S:C}]{Conclusion}
