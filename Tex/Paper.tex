@@ -187,11 +187,23 @@ the electron beam present. The electron witness beam will be injected into the m
 where acceleration will occur. As the $E_z$-field will decrease due to the gap between the two cells, it is desirable to
 keep this as short as possible \cite{adli:2016}.
 
-\vspace{1em}
-\noindent\textbf{From Patric, expand and add this:}\\
-Then I would propose to state that the SM does not create a focusing force increasing linearly with radius because not
-all e- are evacuated. The state that because the structure is small, a  bunch with significant charge and reasonable
-current is not much shorter than the structure size and thus large energy spread is expected.
+With this experimental design the self-modulated proton beam does not produce a non-linear wakefield, and not all plasma
+electrons are therefore evacuated. The result is that the focusing force will not increase linearly with radius. The
+small size of the accelerating structure produced by the self-modulated beam also put constraints on the size of the
+electron witness bunch, and thus its charge and current, if we wish to prevent large energy spread. By matching the
+transverse size to a practical emittance and the plasma density, we prevent large amplitude oscillations which may cause
+additional growth in energy spread as well as in emittance.
+
+This beam matching relation is given by
+\begin{align}
+    \beta = \frac{\sigma_r^2}{\epsilon_g} = \frac{\lambda_pe}{2\pi}\sqrt{2\gamma_{rel}}, \label{EQ:Matched}
+\end{align}
+where $\lambda_{p}$ is the plasma wavelength. For a reasonable initial emittance of $2\unit{\mu m}$, this corresponds to
+a $\sigma_{r}$ of $5.25\unit{\mu m}$ -- a very narrow bunch compared to the drive beam initial
+$\sigma_{r} = 200\unit{\mu m}$. This charge density of this compact witness bunch reaches that of the plasma density at
+only a few $\unit{pC}$. It only and reaches optimal beam loading at around $1-200\unit{pC}$, the implication being that
+the witness bunch produces its own non-linear wakefield already at the head of the bunch. The majority of the electrons
+within it will therefore see a linear focusing force preventing the bulk of the beam from undergoing emittance growth.
 
 % ******************************************************************************************************************** %
 \section[\label{S:M}]{Method}
@@ -199,8 +211,8 @@ current is not much shorter than the structure size and thus large energy spread
 %- simulation setup PIC/quickpic OS
 % ******************************************************************************************************************** %
 
-The main focus of this study has been on the beam loading of the electron beam. In order to eliminate other factors that
-may affect this, we have tried several approaches to create a stable drive beam structure based on previous self-
+The main focus of this study has been on the beam loading of the electron bunch. In order to eliminate other factors
+that may affect this, we have tried several approaches to create a stable drive beam structure based on previous self-
 modulation studies.
 
 Our first approach was to use a pre-modulated, short proton beam with similar structure to the one produced by the
@@ -212,17 +224,18 @@ and the electron beam injected after the 20th micro-bunch \cite{berglyd_olsen:20
 scans with this setup, testing for the the maximum beam charge that could be accelerated with a high energy gain and low
 energy spread \cite{adli:2016, berglyd_olsen:2016}.
 
-In order to evaluate the quality of the beam, we also needed to study emittance evolution. However, full PIC codes like
-Osiris are vulnerable to numerical growth of emittance caused by the ``numerical Cherenkov effect'' \cite{godfrey:1974}.
-This is a know issue with the Yee EMF solver which causes the phase velocity of electromagnetic fields to be lower than
-$c$ while the beam moves very close to $c$. The effect can be mitigated somewhat by replacing the Yee solver with a
-solver designed by Lehe \cite{lehe:2013}. Our simulations showed that this numerical effect is still prominent in the
-high density regions of the electron beam, making it difficult to distinguish emittance growth from the physics from
-that originating from numerical error.
+In order to evaluate the quality of the accelerated bunch it was also necessary to study emittance evolution. However,
+full PIC codes like Osiris are vulnerable to numerical growth of emittance caused by the ``numerical Cherenkov effect''
+\cite{godfrey:1974}. This is a know issue with the Yee EMF solver which causes the phase velocity of electromagnetic
+fields to be lower than $c$ while the beam moves very close to $c$. The effect can be mitigated somewhat by replacing
+the Yee solver with a solver designed by Lehe \cite{lehe:2013}. Our simulations showed that this numerical effect is
+still prominent in the high density regions of our very compact electron bunch, making it difficult to distinguish
+emittance growth from the physics from that originating from numerical error, and for long simulations drowning it
+entirely.
 
-Quasi-static PIC codes do not suffer this problem, so in order to study the emittance evolution of the beam we instead
-turned to the recently released open source version QuickPIC developed by UCLA. QuickPIC is a fully relativistic 3D PIC
-code \cite{huang:2006, an:2013}.
+In order to study the witness bunch emittance evolution we turned to the recently released open source version of
+QuickPIC developed by UCLA. QuickPIC is a fully relativistic 3D quasi-static PIC code \cite{huang:2006, an:2013}. The
+numerical Cherenkov effect does not apply to such quasi-static codes.
 
 % ******************************************************************************************************************** %
 \subsection[\label{S:M:Setup}]{Drive Beam Parameters}
@@ -233,27 +246,26 @@ code \cite{huang:2006, an:2013}.
 %~   not desirable
 % ******************************************************************************************************************** %
 
-In the QuickPIC simulations we use a single proton drive bunch that sets up a wakefield comparable to that which we
+In these QuickPIC simulations we use a single proton drive bunch that sets up a wakefield comparable to that which we
 expect to see from the self-modulated SPS beam in AWAKE Run 2. The baseline AWAKE drive beam contains $3\nexp{11}$
 protons \cite{gschwendtner:2016}. Only half of these are driving the wakefield, presuming the self-modulation is seeded
-in the middle of the unmodulated bunch. In addition. a significant portion of the protons are lost during
-self-modulation. The needed gap between the two plasma cells also contributes to a decreased density of protons near the
-axis, and some of the field is drained by other protons seeing an accelerating phase within the drive beam itself. In
-total, the expected peak $E_{z}$ field of $~2\funit{GV}{m}$ in the first plasma cell drops to $500-600\funit{MV}{m}$ in
-the second cell \cite{awake_collaboration:2016}. A single proton bunch of $1.46\nexp{10}$, or $2.34\unit{nC}$ and
-$7\unit{kA}$ was able to drive an $E_{z}$ field of a comparable magnitude in our single drive bunch setup.
+in the middle of the unmodulated bunch. In addition, a significant portion of the protons are lost from the near axis
+region during self-modulation. The needed gap between the two plasma cells also contributes to a decreased density of
+protons near the axis, and some of the field is drained by other protons seeing an accelerating phase within the drive
+beam itself. In total, the expected peak $E_{z}$ field of $~2\funit{GV}{m}$ in the first plasma cell drops to
+$500-600\funit{MV}{m}$ in the second cell \cite{awake_collaboration:2016}. A single proton bunch of $1.46\nexp{10}$,
+or $2.34\unit{nC}$ and $7\unit{kA}$ was able to drive an $E_{z}$ field of a comparable magnitude in our single drive
+bunch setup.
 
-The single bunch approach also has the benefit of reducing simulation time for the 3D simulations. Our aim was to create
-a stable environment for the witness beam. We are not considering the evolution of the proton beam in this test setup,
-so to prevent the proton beam from evolving radially, we increased the drive beam particle mass by a factor of
-$1\mexp{6}$.
-
-The baseline AWAKE drive beam current is insufficient to reach the non-linear regime and produce a plasma bubble. The
-plasma electrons are depleted to around $65\%$ of nominal plasma density at the injection point of the electron beam in
-reference simulations \cite{awake_collaboration:2016}. This condition is replicated in out single bunch case. The peak
-density of the drive beam is $0.83\cdot n_{0}$ producing a quasi-linear condition behind it. The single bunch setup uses
+As the baseline AWAKE drive beam current is insufficient to reach the non-linear regime and produce a plasma bubble, the
+plasma electrons are only depleted to around $65\%$ of nominal plasma density at the point where we inject the electron
+bunch in reference simulations \cite{awake_collaboration:2016}. This condition is replicated in out single bunch case.
+The peak density of the drive beam is $0.83\cdot n_{0}$, producing a quasi-linear wakefield. The single bunch setup uses
 the baseline proton energy $W_{pb} = 400\unit{GeV}$, and retains the transverse size $\sigma_{r} = 200\unit{\mu m}$
-throughout the plasma cell. The length of the drive bunch $\sigma_{z} = 40\unit{\mu m}$.
+throughout the plasma cell. The length of the drive bunch in these simulations is $\sigma_{z} = 40\unit{\mu m}$.
+In order to create a stable environment to study the evolution of the witness bunch we prevented the proton beam from
+evolving radially by increasing the particle mass by a factor of $1\mexp{6}$. We are not considering the evolution of
+the proton beam in this study.
 
 % ******************************************************************************************************************** %
 \subsection[\label{S:M:Setup}]{Witness Beam Parameters}
@@ -262,25 +274,22 @@ throughout the plasma cell. The length of the drive bunch $\sigma_{z} = 40\unit{
 The witness beam in our simulation differs from AWAKE baseline parameters on several key points. Initial beam energy is
 set such that $\gamma_{eb} = \gamma_{pb} = 426.3$. This was done to eliminate the problem of initial de-phasing of the
 witness beam. Beam loading of a short witness beam is sensitive to its position relative to the field
-\cite{tzoufras:2009}. AWAKE baseline energy for the long witness beam for Run 1 is $W_{eb} = 10-20\unit{MeV}$
-\cite{gschwendtner:2016}. In Run 2 the experiment will likely require a higher initial energy, but a
-$W_{eb} \approx 50\unit{MeV}$ is sufficient to minimise de-phasing as the drift $\Delta\xi \propto \gamma^{-2}$
-\cite{berglyd_olsen:2015}. For this case we have eliminated this source of de-phasing entirely in order to reduce the
-number of variables.
+\cite{tzoufras:2009}, and the number of inter-dependent parameters is already large for these simulations. AWAKE
+baseline energy for the long witness beam for Run 1 is $W_{eb} = 10-20\unit{MeV}$ \cite{gschwendtner:2016}, but in Run 2
+the experiment will likely require a higher initial energy A $W_{eb} \approx 50\unit{MeV}$ is sufficient to minimise
+de-phasing as the drift $\Delta\xi \propto \gamma^{-2}$ \cite{berglyd_olsen:2015}.
 
-Earlier simulations with witness beam radius $\sigma_{r} = 100\unit{\mu m}$ caused the beam to undergo rapid transverse
-evolution as the beam entered the plasma region, reducing its $\sigma_{r}$ from $100\unit{\mu m}$ to $< 10\unit{\mu m}$
-\cite{berglyd_olsen:2016}. This was primarily due to a mismatch between beam emittance and the plasma density. This
-relation is given by
-\begin{align}
-    \beta = \frac{\sigma_r^2}{\epsilon_g} = \frac{\lambda_pe}{2\pi}\sqrt{2\gamma_{rel}}, \label{EQ:Matched}
-\end{align}
-where $\lambda_{p}$ is the plasma wavelength.
+Earlier simulations were done using Run 1 witness bunch parameters, with radius $\sigma_{r} = 100\unit{\mu m}$. This
+caused the bunch to undergo rapid transverse evolution as the it entered the plasma region, reducing its $\sigma_{r}$
+from $100\unit{\mu m}$ to $< 10\unit{\mu m}$ \cite{berglyd_olsen:2016}. This transverse evolution was primarily due to a
+mismatch between beam emittance and the plasma density, but was difficult to avoid as narrow on-axis bunches were
+numerically difficult to resolve sufficiently in cylindrical geometry.
 
-In these simulations we have used a matched beam for an initial emittance of $2\unit{\mu m}$, corresponding to a
+In these 3D simulations we have used a matched beam for an initial emittance of $2\unit{\mu m}$, corresponding to a
 $\sigma_{r}$ of $5.25\unit{\mu m}$. The relatively small size of the witness beam compared to the proton beam put some
-restrictions on the transverse resolution of the witness beam. The transverse grid cell resolution was set to
-$1.17\unit{\mu m}$.
+restrictions on the transverse resolution of the witness beam also in these simulations. The transverse grid cell
+resolution was set to $1.17\unit{\mu m}$, and the witness bunch was simulated with $16.8+unit{M}$ non-weighted
+particles.
 
 % ******************************************************************************************************************** %
 \section[\label{S:BL}]{Beam Loading}
