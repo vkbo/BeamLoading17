@@ -105,25 +105,25 @@ we show that the bulk of the electron beam can be accelerated without significan
 % ******************************************************************************************************************** %
 
 Beam driven plasma wakefield accelerators have the potential to offer compact linear accelerators with high energy
-gradients, and has been of interest for several decades \cite{chen:1985}. A relativist beam travelling through a plasma
-will excite a strong longitudinal e-field that can be loaded by a trailing witness beam. With optimal beam loading, the
-witness beam can have a high acceleration gradient. Acceleration of an electron beam by an electron drive bunch has been
-demonstrated experimentally \cite{rosenzweig:1988, blumenfeld:2007, kallos:2008} in the past. The AWAKE experiment at
-CERN is a proof of concept proton driven plasma wakefield accelerator \cite{awake_collaboration:2014}.
+gradients, and have been of interest for several decades \cite{chen:1985}. A relativist beam travelling through a plasma
+excites a strong longitudinal e-field that can be loaded by a trailing witness beam. With optimal beam loading, increase
+in energy spread can be kept to a minimum. Acceleration of an electron bunch by an electron drive bunch has been
+demonstrated experimentally \cite{rosenzweig:1988, blumenfeld:2007, kallos:2008} in the past. AWAKE at CERN is a proof
+of concept proton driven plasma wakefield accelerator experiment \cite{awake_collaboration:2014}.
 
-A major challenge with plasma wakefield accelerators is, however, to produce an accelerated beam with a minimal increase
-in energy spread and emittance. In the well described linear case where the beam density $n_{b}$ is much smaller than
-the plasma density $n_{0}$ the plasma causes emittance growth in the beam. A finite length beam will also see a varying
-transverse wakefield causing increasing energy spread \cite{katsouleas:1987}. In the non-linear regime, where
-$n_{b} > n_{0}$, the drive beam sees an unvarying transverse field due to a bubble forming in the plasma behind the
-drive beam. The bubble is formed by the transverse oscillations of the plasma electrons which move near uniformly as a
-function of distance from the drive beam, forming a sheet around an evacuated area. The much heavier plasma ions have no
-significant movement within the relevant time frame, and form an ion channel creating a focusing force that scales
-linearly with the radius. This produces an angularly symmetric focusing force \cite{lu:2006-1, lu:2006}. This effect
-also avoids the issue of increasing energy spread due to transverse beam loading. Increase in energy spread is still
-dependent on beam loading of the longitudinal e-field, $E_{z}$. Non-uniform beam loading can be negated by specially
-shaped beams that optimally flattens the field \cite{katsouleas:1987, tzoufras:2009}, but this is difficult
-experimentally and is not a topic explored in this paper.
+A major challenge with plasma wakefield accelerators is, however, to produce an accelerated beam while keeping growth in
+energy spread and emittance as low as possible. In the well described linear case where the beam density $n_{b}$ is much
+smaller than the plasma density $n_{0}$ the transverse wakefields cause emittance growth of the accelerated bunch. A
+finite length bunch will also see a transversely varying accelerating field causing increasing energy spread
+\cite{katsouleas:1987}. In the non-linear regime, where $n_{b} > n_{0}$, the drive beam sees a constant transverse field
+due to a bubble forming in the plasma behind the drive beam. The bubble is formed by the transverse oscillations of the
+plasma electrons in the wake of the drive bunch, forming a sheet around an evacuated area. The much heavier plasma ions
+have no significant transverse movement within the time frame of the plasma electron oscillation as these are
+proportional to $sqrt{m}$. The ions form an ion channel creating a focusing force that varies linearly with radius. This
+produces an angularly symmetric focusing force \cite{lu:2006-1, lu:2006}. This effect also avoids the issue of
+increasing energy spread due to transverse beam loading. Increase in energy spread is still dependent on beam loading
+$E_{z}$. Ideal beam loading can be achieved by specially shaped beams that optimally flattens the field
+\cite{katsouleas:1987, tzoufras:2009}, but this is difficult experimentally and is not a topic explored in this paper.
 
 % ******************************************************************************************************************** %
 \subsection[\label{S:I:SMI}]{Self-modulation as a Driver}
@@ -135,41 +135,44 @@ experimentally and is not a topic explored in this paper.
 % ******************************************************************************************************************** %
 
 A train of electron drive bunches with a separation $\lambda_{pe}$ and a length $l_{b} \ll \lambda_{pe}$, where
-\begin{align}
-    \lambda_{p} = 2\pi\frac{c}{\omega_{pe}} \label{EQ:LambdaP}
-\end{align}
-and
-\begin{align}
-    \omega_{pe} = \sqrt{\frac{n_{0} e^{2}}{m_{e} \epsilon_{0}}}, \label{EQ:OmegaP}
-\end{align}
-%$\lambda_{p} = 2\pi c/\omega_{pe}$ and $\omega_{pe} = (n_{0} e^{2} / m_{e} \epsilon_{0})^{1/2}$,
-will drive an increasingly strong field $E_{z}$ for each bunch \cite{chen:1985}. A tailing witness beam loading the peak
-accelerating phase of this field will quickly gain energy from the wakefield. Acceleration of an electron witness beam
-driven by two electron drive beams was demonstrated at Brookhaven National Laboratory \cite{muggli:2011}. However,
-electron drive bunches will quickly lose energy to the plasma, and the accelerating witness beam will eventually catch
-up with the drive beam and the acceleration stop.
+%~ \begin{align}
+    %~ \lambda_{p} = 2\pi\frac{c}{\omega_{pe}} \label{EQ:LambdaP}
+%~ \end{align}
+%~ and
+%~ \begin{align}
+    %~ \omega_{pe} = \sqrt{\frac{n_{0} e^{2}}{m_{e} \epsilon_{0}}}, \label{EQ:OmegaP}
+%~ \end{align}
+$\lambda_{p} = 2\pi c/\omega_{pe}$ and $\omega_{pe} = (n_{0} e^{2} / m_{e} \epsilon_{0})^{1/2}$,
+will produce a field $E_{z}$ that increases for each drive bunch \cite{chen:1985}. A tailing witness beam loading the
+peak accelerating phase of this field will gain energy from the wakefield from all of the drive bunches. Acceleration of
+an electron witness beam driven by two electron drive beams was demonstrated at Brookhaven National Laboratory
+\cite{muggli:2011}.
 
-This de-phasing problem can be minimised by instead using a proton drive bunch \cite{caldwell:2009}. Proton beams, like
-for instance the LHC and SPS beams at CERN, are ideal candidates for such an accelerator. However, they are orders of
-magnitude longer than the plasma wavelengths needed for such applications. This issue is resolved by letting the proton
-beam undergo self-modulation before injecting the witness beam into one of the buckets in the modulated structure. This
-self-modulation instability is caused by the transverse fields generated by the beam acting upon the beam itself,
-causing regions of the beam to rapidly defocus \cite{kumar:2010}. The modulation frequency is close to that of the
-plasma, and leaves a train of proton bunches along the beam axis with a surrounding halo.
+The energy carried by electron drive bunches used in previous experiments is typically small, on the order of
+$100\unit{J}$, and the propagation length typically $<1\unit{m}$ \cite{blumenfeld:2007,caldwell:2009}. De-phasing of the
+witness bunch relative to the drive bunch, caused by loss of energy in the drive bunch and gain of energy in the witness
+bunch, limits the effective length of a plasma accelerator stage. Proton drive beams available at CERN carry
+significantly more energy, $19\unit{kJ}$ for the SPS beam \cite{gschwendtner:2016}, allowing for longer accelerator
+stages. However, the SPS beam is orders of magnitude longer than the plasma wavelengths needed for such applications.
+This issue is resolved by letting the proton beam undergo self-modulation before injecting the witness beam into one of
+the buckets in the modulated structure. This self-modulation instability is caused by the transverse fields generated by
+the beam acting upon the beam itself, causing regions of the beam to rapidly defocus \cite{kumar:2010}. The modulation
+frequency is close to that of the plasma, and leaves a train of proton bunches along the beam axis with a surrounding
+halo.
 
 % ******************************************************************************************************************** %
 \subsection[\label{S:I:AWAKE}]{The AWAKE Experiment}
 % ******************************************************************************************************************** %
 
-The AWAKE experiment, currently in its first stages of operation at CERN, uses the SPS beam as its driver. The first run
-of the experiment is set up with a $10\unit{m}$ rubidium vapour cell. The rubidium vapour is ionised by a
-$780\unit{nm}$, $4.5\unit{TW}$ peak power laser with a pulse length of $100−120\unit{fs}$. The nominal plasma density of
-the AWAKE experiment is $7\nexp{14}\unit{cm}^{-3}$ \cite{gschwendtner:2016}. This plasma density corresponds to a plasma
-wavelength $\lambda_{pe} = 1.26\unit{mm}$. The plasma density is matched to the SPS proton beam such that
-$k_{pe}\sigma_{r} = 1$ where $k_{pe} = 2\pi/\lambda_{pe}$ is the plasma wave number. The aim of the first phase of Run 1
-of the experiment is to demonstrate self-modulation of the proton beam, and in 2018 to sample the wake field with a long
-electron bunch. The study presented here is for Run 2, which aims to demonstrate acceleration of a short electron bunch
-to high energy with a minimal increase in emittance and energy spread.
+The AWAKE experiment, currently in its first stages of operation at CERN, uses the SPS beam at $400\unit{GeV}$ as its
+driver. The first run of the experiment is set up with a $10\unit{m}$ rubidium vapour cell. The rubidium vapour is
+ionised by a $780\unit{nm}$, $4.5\unit{TW}$ peak power laser with a pulse length of $100−120\unit{fs}$. The nominal
+plasma density of the AWAKE experiment is $7\nexp{14}\unit{cm}^{-3}$ \cite{gschwendtner:2016}. This plasma density
+corresponds to a plasma wavelength $\lambda_{pe} = 1.26\unit{mm}$. The plasma density is matched to the SPS proton beam
+such that $k_{pe}\sigma_{r} = 1$ where $k_{pe} = 2\pi/\lambda_{pe}$ is the plasma wave number. The aim of the first
+phase of Run 1 of the experiment is to demonstrate self-modulation of the proton beam, and in 2018 to sample the
+wakefield with a long electron bunch. The study presented here is for Run 2, which aims to demonstrate acceleration of a
+short electron bunch to high energy with a minimal increase in emittance and energy spread.
 
 \begin{figure}[hbt]
     \includegraphics[width=0.99\linewidth,trim={1mm 2mm 1mm 2mm},clip]{figures/figAWAKE}
@@ -183,6 +186,12 @@ The first section of $4\unit{m}$ is the self-modulation stage where the proton b
 the electron beam present. The electron witness beam will be injected into the modulated proton beam before stage two,
 where acceleration will occur. As the $E_z$-field will decrease due to the gap between the two cells, it is desirable to
 keep this as short as possible \cite{adli:2016}.
+
+\vspace{1em}
+\noindent\textbf{From Patric, expand and add this:}\\
+Then I would propose to state that the SM does not create a focusing force increasing linearly with radius because not
+all e- are evacuated. The state that because the structure is small, a  bunch with significant charge and reasonable
+current is not much shorter than the structure size and thus large energy spread is expected.
 
 % ******************************************************************************************************************** %
 \section[\label{S:M}]{Method}
