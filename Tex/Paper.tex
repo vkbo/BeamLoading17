@@ -75,7 +75,7 @@
 %~ itself a topic of research, so I think we can only state a few things ...
 
 
-\title{Emittance preservation of an electron bunch in a loaded quasi-linear plasma wakefield}
+\title{Emittance preservation of an electron beam in a loaded quasi-linear plasma wakefield}
 
 \author{Veronica K. Berglyd Olsen}
 \email[]{v.k.b.olsen@cern.ch}
@@ -92,8 +92,9 @@
 \begin{abstract}
 We investigate beam loading and emittance preservation for a high-charge electron beam being accelerated in quasi-linear
 plasma wakefield driven by a short proton beam. The structure of the wakefield is similar to that of a long, modulated
-proton beam. By selecting transverse and longitudinal electron beam parameters in order to appropriately load the wake,
-we show that the bulk of the electron beam can be accelerated without significant emittance growth.
+proton beam, such as the one being studied by AWAKE.  We show that by exploiting two well known effects, full blow out
+of plasma electrons by the accelerated beam, and beam loading of the wake field, the electron beam can be accelerated
+without significant emittance growth.
 \end{abstract}
 
 \maketitle
@@ -107,23 +108,23 @@ we show that the bulk of the electron beam can be accelerated without significan
 Beam driven plasma wakefield accelerators have the potential to offer compact linear accelerators with high energy
 gradients, and have been of interest for several decades \cite{chen:1985}. A relativist beam travelling through a plasma
 excites a strong longitudinal e-field that can be loaded by a trailing witness beam. With optimal beam loading, increase
-in energy spread can be kept to a minimum. Acceleration of an electron bunch by an electron drive bunch has been
+in energy spread can be kept to a minimum. Acceleration of an electron withness beam by an electron drive beam has been
 demonstrated experimentally \cite{rosenzweig:1988, blumenfeld:2007, kallos:2008} in the past. AWAKE at CERN is a proof
 of concept proton driven plasma wakefield accelerator experiment \cite{awake_collaboration:2014}.
 
 A major challenge with plasma wakefield accelerators is, however, to produce an accelerated beam while keeping growth in
 energy spread and emittance as low as possible. In the well described linear case where the beam density $n_{b}$ is much
-smaller than the plasma density $n_{0}$ the transverse wakefields cause emittance growth of the accelerated bunch. A
-finite length bunch will also see a transversely varying accelerating field causing increasing energy spread
+smaller than the plasma density $n_{0}$, the non-linear transverse wakefields cause emittance growth of the accelerated
+beam. A finite length beam will also see a transversely varying accelerating field causing increasing energy spread
 \cite{katsouleas:1987}. In the non-linear regime, where $n_{b} > n_{0}$, the drive beam sees a constant transverse field
 due to a bubble forming in the plasma behind the drive beam. The bubble is formed by the transverse oscillations of the
-plasma electrons in the wake of the drive bunch, forming a sheet around an evacuated area. The much heavier plasma ions
-have no significant transverse movement within the time frame of the plasma electron oscillation as these are
-proportional to $sqrt{m}$. The ions form an ion channel creating a focusing force that varies linearly with radius. This
-produces an angularly symmetric focusing force \cite{lu:2006-1, lu:2006}. This effect also avoids the issue of
-increasing energy spread due to transverse beam loading. Increase in energy spread is still dependent on beam loading
-$E_{z}$. Ideal beam loading can be achieved by specially shaped beams that optimally flattens the field
-\cite{katsouleas:1987, tzoufras:2009}, but this is difficult experimentally and is not a topic explored in this paper.
+plasma electrons in the wake of the drive beam, forming a sheet around an evacuated area. The ions, assumed stationary,
+form an ion channel creating a focusing force that varies linearly with radius. This
+produces an axially symmetric focusing force \cite{lu:2006-1, lu:2006}.
+%~ This effect also avoids the issue of increasing energy spread due to transverse beam loading. Increase in energy spread
+%~ is still dependent on beam loading $E_{z}$.
+%~ Ideal beam loading can be achieved by specially shaped beams that optimally flattens the field
+%~ \cite{katsouleas:1987, tzoufras:2009}, but this is difficult experimentally and is not a topic explored in this paper.
 
 % ******************************************************************************************************************** %
 \subsection[\label{S:I:SMI}]{Self-modulation as a Driver}
@@ -148,10 +149,10 @@ peak accelerating phase of this field will gain energy from the wakefield from a
 an electron witness beam driven by two electron drive beams was demonstrated at Brookhaven National Laboratory
 \cite{muggli:2011}.
 
-The energy carried by electron drive bunches used in previous experiments is typically small, on the order of
+The energy carried by electron drive bunches used in previous experiments were typically small, on the order of
 $100\unit{J}$, and the propagation length typically $<1\unit{m}$ \cite{blumenfeld:2007,caldwell:2009}. De-phasing of the
-witness bunch relative to the drive bunch, caused by loss of energy in the drive bunch and gain of energy in the witness
-bunch, limits the effective length of a plasma accelerator stage. Proton drive beams available at CERN carry
+witness beam relative to the drive beam, caused by loss of energy in the drive beam and gain of energy in the witness
+beam, limits the effective length of a plasma accelerator stage. Proton drive beams available at CERN carry
 significantly more energy, $19\unit{kJ}$ for the SPS beam \cite{gschwendtner:2016}, allowing for longer accelerator
 stages. However, the SPS beam is orders of magnitude longer than the plasma wavelengths needed for such applications.
 This issue is resolved by letting the proton beam undergo self-modulation before injecting the witness beam into one of
@@ -161,18 +162,19 @@ frequency is close to that of the plasma, and leaves a train of proton bunches a
 halo.
 
 % ******************************************************************************************************************** %
-\subsection[\label{S:I:AWAKE}]{The AWAKE Experiment}
+\subsection[\label{S:I:AWAKE}]{AWAKE Run 2}
 % ******************************************************************************************************************** %
 
+%~ The first run of the experiment is set up with a $10\unit{m}$ rubidium vapour cell.
+%~ The rubidium vapour is
+%~ ionised by a $780\unit{nm}$, $4.5\unit{TW}$ peak power laser with a pulse length of $100−120\unit{fs}$.
 The AWAKE experiment, currently in its first stages of operation at CERN, uses the SPS beam at $400\unit{GeV}$ as its
-driver. The first run of the experiment is set up with a $10\unit{m}$ rubidium vapour cell. The rubidium vapour is
-ionised by a $780\unit{nm}$, $4.5\unit{TW}$ peak power laser with a pulse length of $100−120\unit{fs}$. The nominal
-plasma density of the AWAKE experiment is $7\nexp{14}\unit{cm}^{-3}$ \cite{gschwendtner:2016}. This plasma density
+driver, and a nominal plasma density $7\nexp{14}\unit{cm}^{-3}$ \cite{gschwendtner:2016}. This plasma density
 corresponds to a plasma wavelength $\lambda_{pe} = 1.26\unit{mm}$. The plasma density is matched to the SPS proton beam
 such that $k_{pe}\sigma_{r} = 1$ where $k_{pe} = 2\pi/\lambda_{pe}$ is the plasma wave number. The aim of the first
 phase of Run 1 of the experiment is to demonstrate self-modulation of the proton beam, and in 2018 to sample the
-wakefield with a long electron bunch. The study presented here is for Run 2, which aims to demonstrate acceleration of a
-short electron bunch to high energy with a minimal increase in emittance and energy spread.
+wakefield with a long electron beam. The study presented here is for Run 2 \cite{adli:2016}, which aims to demonstrate
+acceleration of a short electron beam to high energy with a minimal increase in emittance and energy spread.
 
 \begin{figure}[hbt]
     \includegraphics[width=0.99\linewidth,trim={1mm 2mm 1mm 2mm},clip]{figures/figAWAKE}
@@ -184,26 +186,32 @@ short electron bunch to high energy with a minimal increase in emittance and ene
 The preliminary design of the second run proposes to use two plasma sections, illustrated in figure \ref{Fig:AWAKER2}.
 The first section of $4\unit{m}$ is the self-modulation stage where the proton beam undergoes self-modulation without
 the electron beam present. The electron witness beam will be injected into the modulated proton beam before stage two,
-where acceleration will occur. As the $E_z$-field will decrease due to the gap between the two cells, it is desirable to
-keep this as short as possible \cite{adli:2016}.
+where acceleration will occur.
+%~ As the $E_z$-field will decrease due to the gap between the two cells, it is desirable to
+%~ keep this as short as possible.
 
 With this experimental design the self-modulated proton beam does not produce a non-linear wakefield, and not all plasma
 electrons are therefore evacuated. The result is that the focusing force will not increase linearly with radius. The
 small size of the accelerating structure produced by the self-modulated beam also put constraints on the size of the
-electron witness bunch, and thus its charge and current, if we wish to prevent large energy spread. By matching the
+electron witness beam, and thus its charge and current, if we wish to prevent large energy spread. By matching the
 transverse size to a practical emittance and the plasma density, we prevent large amplitude oscillations which may cause
 additional growth in energy spread as well as in emittance.
 
-This beam matching relation is given by
-\begin{align}
-    \beta = \frac{\sigma_r^2}{\epsilon_g} = \frac{\lambda_pe}{2\pi}\sqrt{2\gamma_{rel}}, \label{EQ:Matched}
-\end{align}
-where $\lambda_{p}$ is the plasma wavelength. For a reasonable initial emittance of $2\unit{\mu m}$, this corresponds to
-a $\sigma_{r}$ of $5.25\unit{\mu m}$ -- a very narrow bunch compared to the drive beam initial
-$\sigma_{r} = 200\unit{\mu m}$. This charge density of this compact witness bunch reaches that of the plasma density at
-only a few $\unit{pC}$. It only and reaches optimal beam loading at around $1-200\unit{pC}$, the implication being that
-the witness bunch produces its own non-linear wakefield already at the head of the bunch. The majority of the electrons
-within it will therefore see a linear focusing force preventing the bulk of the beam from undergoing emittance growth.
+The key idea in this paper is that while the proton beam wake is not fully blown-out leading to non-linear focusing
+forces, the electron beam, if intense enough, may load the field and at the same time create its own ion bubble. As will
+be shown, exploiting these two well known effect, the electron beam can be accelerated, for long distances, without
+significant emittance growth.
+
+%~ The beam matching relation is given by
+%~ \begin{align}
+    %~ \beta = \frac{\sigma_r^2}{\epsilon_g} = \frac{\lambda_pe}{2\pi}\sqrt{2\gamma_{rel}}, \label{EQ:Matched}
+%~ \end{align}
+%~ where $\lambda_{p}$ is the plasma wavelength. For a reasonable initial emittance of $2\unit{\mu m}$, this corresponds to
+%~ a $\sigma_{r}$ of $5.25\unit{\mu m}$ -- a very narrow bunch compared to the drive beam $\sigma_{r} = 200\unit{\mu m}$.
+%~ The charge density of this compact witness bunch reaches that of the plasma density at only a few $\unit{pC}$, but
+%~ reaches optimal beam loading at around $1-200\unit{pC}$. The implication here being that the witness bunch produces its
+%~ own non-linear wakefield already at the head of the bunch. The majority of the electrons within it will therefore see a
+%~ linear focusing force preventing the bulk of the beam from undergoing emittance growth.
 
 % ******************************************************************************************************************** %
 \section[\label{S:M}]{Method}
@@ -211,31 +219,26 @@ within it will therefore see a linear focusing force preventing the bulk of the 
 %- simulation setup PIC/quickpic OS
 % ******************************************************************************************************************** %
 
-The main focus of this study has been on the beam loading of the electron bunch. In order to eliminate other factors
+The main focus of this study has been on the beam loading of the electron beam. In order to eliminate other factors
 that may affect this, we have tried several approaches to create a stable drive beam structure based on previous self-
 modulation studies.
 
 Our first approach was to use a pre-modulated, short proton beam with similar structure to the one produced by the
 self-modulation of the SPS beam in AWAKE. These studies were done using the full PIC code Osiris \cite{fonseca:2002}
-using 2D cylindrical-symmetric simulations. The proton beam was pre-modulated by a clipped cosine function to its
-longitudinal density profile, with a period matching $\lambda_{pe}$. Its transverse profile was kept as a Gaussian with
-$\sigma_{r} = k_{pe}^{-1} = 200\unit{\mu m}$. The length of the simulation beam was limited to $26\cdot\lambda_{pe}$,
-and the electron beam injected after the 20th micro-bunch \cite{berglyd_olsen:2015}. We performed several parameter
-scans with this setup, testing for the the maximum beam charge that could be accelerated with a high energy gain and low
-energy spread \cite{adli:2016, berglyd_olsen:2016}.
+using 2D cylindrical-symmetric simulations \cite{berglyd_olsen:2015, berglyd_olsen:2016}.
 
-In order to evaluate the quality of the accelerated bunch it was also necessary to study emittance evolution. However,
-full PIC codes like Osiris are vulnerable to numerical growth of emittance caused by the ``numerical Cherenkov effect''
-\cite{godfrey:1974}. This is a know issue with the Yee EMF solver which causes the phase velocity of electromagnetic
-fields to be lower than $c$ while the beam moves very close to $c$. The effect can be mitigated somewhat by replacing
-the Yee solver with a solver designed by Lehe \cite{lehe:2013}. Our simulations showed that this numerical effect is
-still prominent in the high density regions of our very compact electron bunch, making it difficult to distinguish
-emittance growth from the physics from that originating from numerical error, and for long simulations drowning it
-entirely.
+%~ In order to evaluate the quality of the accelerated bunch it was also necessary to study emittance evolution. However,
+%~ full PIC codes are vulnerable to numerical growth of emittance caused by the ``numerical Cherenkov effect''
+%~ \cite{godfrey:1974}. This is a know issue with the Yee EMF solver which causes the phase velocity of electromagnetic
+%~ fields to be lower than $c$ while the beam moves very close to $c$. The effect can be mitigated somewhat by replacing
+%~ the Yee solver with a solver designed by Lehe \cite{lehe:2013}. Our simulations showed that this numerical effect is
+%~ still prominent in the high density regions of our very compact electron bunch, making it difficult to distinguish
+%~ emittance growth from the physics from that originating from numerical error.
 
-In order to study the witness bunch emittance evolution we turned to the recently released open source version of
-QuickPIC developed by UCLA. QuickPIC is a fully relativistic 3D quasi-static PIC code \cite{huang:2006, an:2013}. The
-numerical Cherenkov effect does not apply to such quasi-static codes.
+In order to study the witness beam emittance evolution we turned to the recently released open source version of
+QuickPIC developed by UCLA. QuickPIC is a fully relativistic 3D quasi-static PIC code \cite{huang:2006, an:2013}.
+Since QuickPIC is a quasi-static code, it does not suffer from the numerical Cherenkov effect that full PIC codes do
+\cite{godfrey:1974,lehe:2013}, it is well suited to study emittance preservation.
 
 % ******************************************************************************************************************** %
 \subsection[\label{S:M:Setup}]{Drive Beam Parameters}
@@ -246,26 +249,19 @@ numerical Cherenkov effect does not apply to such quasi-static codes.
 %~   not desirable
 % ******************************************************************************************************************** %
 
-In these QuickPIC simulations we use a single proton drive bunch that sets up a wakefield comparable to that which we
-expect to see from the self-modulated SPS beam in AWAKE Run 2. The baseline AWAKE drive beam contains $3\nexp{11}$
-protons \cite{gschwendtner:2016}. Only half of these are driving the wakefield, presuming the self-modulation is seeded
-in the middle of the unmodulated bunch. In addition, a significant portion of the protons are lost from the near axis
-region during self-modulation. The needed gap between the two plasma cells also contributes to a decreased density of
-protons near the axis, and some of the field is drained by other protons seeing an accelerating phase within the drive
-beam itself. In total, the expected peak $E_{z}$ field of $~2\funit{GV}{m}$ in the first plasma cell drops to
-$500-600\funit{MV}{m}$ in the second cell \cite{awake_collaboration:2016}. A single proton bunch of $1.46\nexp{10}$,
-or $2.34\unit{nC}$ and $7\unit{kA}$ was able to drive an $E_{z}$ field of a comparable magnitude in our single drive
-bunch setup.
+In these simulations we use a single proton drive beam that sets up a wakefield comparable to that which we expect to
+see from the self-modulated SPS beam in the second plasma cell of AWAKE Run 2 (Figure \ref{Fig:AWAKER2}). When the
+initial SPS beam containing $3\nexp{11}$ protons \cite{gschwendtner:2016} enters the second plasma cell the peak $E_{z}$
+field is expected to be $500-600\funit{MV}{m}$. As the baseline AWAKE drive beam current is insufficient to reach the
+non-linear regime and produce a plasma bubble, the plasma electrons are only depleted to around $65\%$ of nominal plasma
+density at the point where we inject the electron beam \cite{awake_collaboration:2016}. These conditions are replicated
+in our simulations using a single proton beam of $1.46\nexp{10}$ protons, or $2.34\unit{nC}$ and $7\unit{kA}$.
 
-As the baseline AWAKE drive beam current is insufficient to reach the non-linear regime and produce a plasma bubble, the
-plasma electrons are only depleted to around $65\%$ of nominal plasma density at the point where we inject the electron
-bunch in reference simulations \cite{awake_collaboration:2016}. This condition is replicated in out single bunch case.
-The peak density of the drive beam is $0.83\cdot n_{0}$, producing a quasi-linear wakefield. The single bunch setup uses
-the baseline proton energy $W_{pb} = 400\unit{GeV}$, and retains the transverse size $\sigma_{r} = 200\unit{\mu m}$
-throughout the plasma cell. The length of the drive bunch in these simulations is $\sigma_{z} = 40\unit{\mu m}$.
-In order to create a stable environment to study the evolution of the witness bunch we prevented the proton beam from
-evolving radially by increasing the particle mass by a factor of $1\mexp{6}$. We are not considering the evolution of
-the proton beam in this study.
+The peak density of the simulation drive beam is $0.83\cdot n_{0}$, producing a quasi-linear wakefield. The single bunch
+setup uses the baseline proton energy $W_{pb} = 400\unit{GeV}$ and transverse size $\sigma_{r} = 200\unit{\mu m}$. We
+set the length of the drive beam to $\sigma_{z} = 40\unit{\mu m}$. In order to create a stable environment to study the
+evolution of the witness beam we prevented the proton beam from evolving radially by increasing the particle mass by a
+factor of $1\mexp{6}$. We are not considering the evolution of the proton beam itself in this study.
 
 % ******************************************************************************************************************** %
 \subsection[\label{S:M:Setup}]{Witness Beam Parameters}
@@ -274,22 +270,24 @@ the proton beam in this study.
 The witness beam in our simulation differs from AWAKE baseline parameters on several key points. Initial beam energy is
 set such that $\gamma_{eb} = \gamma_{pb} = 426.3$. This was done to eliminate the problem of initial de-phasing of the
 witness beam. Beam loading of a short witness beam is sensitive to its position relative to the field
-\cite{tzoufras:2009}, and the number of inter-dependent parameters is already large for these simulations. AWAKE
-baseline energy for the long witness beam for Run 1 is $W_{eb} = 10-20\unit{MeV}$ \cite{gschwendtner:2016}, but in Run 2
-the experiment will likely require a higher initial energy A $W_{eb} \approx 50\unit{MeV}$ is sufficient to minimise
-de-phasing as the drift $\Delta\xi \propto \gamma^{-2}$ \cite{berglyd_olsen:2015}.
-
-Earlier simulations were done using Run 1 witness bunch parameters, with radius $\sigma_{r} = 100\unit{\mu m}$. This
-caused the bunch to undergo rapid transverse evolution as the it entered the plasma region, reducing its $\sigma_{r}$
-from $100\unit{\mu m}$ to $< 10\unit{\mu m}$ \cite{berglyd_olsen:2016}. This transverse evolution was primarily due to a
-mismatch between beam emittance and the plasma density, but was difficult to avoid as narrow on-axis bunches were
-numerically difficult to resolve sufficiently in cylindrical geometry.
+\cite{tzoufras:2009}. The relative drift causing the de-phasing $\Delta\xi \propto \gamma^{-2}$. By simply matching the
+initial $\gamma$ values we eliminate this effect entirely, but a lower initial value is likely to be sufficient
+\cite{berglyd_olsen:2015}.
 
 In these 3D simulations we have used a matched beam for an initial emittance of $2\unit{\mu m}$, corresponding to a
-$\sigma_{r}$ of $5.25\unit{\mu m}$. The relatively small size of the witness beam compared to the proton beam put some
-restrictions on the transverse resolution of the witness beam also in these simulations. The transverse grid cell
-resolution was set to $1.17\unit{\mu m}$, and the witness bunch was simulated with $16.8+unit{M}$ non-weighted
-particles.
+$\sigma_{r}$ of $5.25\unit{\mu m}$. The beam matching relation is given by
+\begin{align}
+    \beta = \frac{\sigma_r^2}{\epsilon_g} = \frac{\lambda_pe}{2\pi}\sqrt{2\gamma_{rel}}, \label{EQ:Matched}
+\end{align}
+where $\lambda_{p}$ is the plasma wavelength. This is a very narrow beam compared to the drive beam
+$\sigma_{r} = 200\unit{\mu m}$. The charge density of this compact witness beam reaches that of the plasma density at
+only a few $\unit{pC}$, but reaches optimal beam loading at around $1-200\unit{pC}$. The implication here being that the
+witness beam produces its own non-linear wakefield already at the head of the beam. The majority of the electrons
+within it will therefore see a linear focusing force preventing the bulk of the beam from undergoing emittance growth.
+
+The relatively small size of the witness beam compared to the proton beam put some restrictions on the transverse
+resolution of the witness beam. We used a transverse grid cell size of $1.17\unit{\mu m}$, and $2.34\unit{\mu m}$ for
+the longitudinal grid cells. The witness beam was simulated with $16.8\unit{M}$ non-weighted particles.
 
 % ******************************************************************************************************************** %
 \section[\label{S:BL}]{Beam Loading}
@@ -331,7 +329,7 @@ particles.
 
 The single drive beam setup is designed to behave similarly to the self-modulated case. However, since the drive beam is
 prevented from significant transverse evolution, we are presented with an idealised case where the electron witness beam
-sees consistent wakefields throughout the plasma stage. The $E_{z}$-field generated by the proton drive bunch is seen as
+sees consistent wakefields throughout the plasma stage. The $E_{z}$-field generated by the proton drive beam is seen as
 the blue line in figure \ref{Fig:BeamLoading}, shown with and without the electron beam present. With a proton beam
 density $n_{pb} \simeq n_{0}$, we are in the quasi-linear regime but near non-linear \cite{rosenzweig:2010}. There is
 some depletion of plasma electrons, but not enough to form a bubble. The dashed green line in the lower part of figure
@@ -341,8 +339,8 @@ scale reference simulations for AWAKE Run 2 \cite{awake_collaboration:2016}.
 %~ - by varying the current of the electron beam, the electron beam may load the wake and the longitudinal field can be
 %~   flatten and energy spread reduced [well known result, Tzoufras]
 
-The witness bunch generates its own wakefield, which in the accelerating phase partially cancels out the $E_{z}$ field
-generated by the drive bunch. For a finite length bunch this causes the particles in the tail of the witness bunch to be
+The witness beam generates its own wakefield, which in the accelerating phase partially cancels out the $E_{z}$ field
+generated by the drive beam. For a finite length beam this causes the particles in the tail of the witness beam to be
 accelerated less than those at the front resulting in higher energy spread in exchange for higher energy transfer
 \cite{van_der_meer:1985}. Since $E_{z} \propto \rho_{b}$, a beam profile $\rho_{b}(\xi)$ that perfectly flattens the
 accelerating field within the witness beam will reduces energy spread to zero. The ideal shape is triangular or
@@ -395,7 +393,7 @@ trapezoidal with the peak density in the direction of the beam velocity \cite{ka
 \end{figure*}
 
 For Gaussian beams a reasonable flat field, and consequently low energy spread, can be achieved by controlling the
-charge density to achieve a similar effect. This, however, puts the front of the witness bunch outside of the ideal
+charge density to achieve a similar effect. This, however, puts the front of the witness beam outside of the ideal
 region while the middle bulk of the beam has a trapezoidal-like shape. In our case, with a matched beam to the plasma
 density defined by equation \ref{EQ:Matched}, we are limited on how much total charge we can accelerate without reaching
 charge densities that will overload the field. The test case shown in figures \ref{Fig:BeamLoading} and
@@ -432,10 +430,10 @@ our $100\unit{pC}$ case is slightly under loaded, and this does not seem to be a
 %~ - in this regime, emittance preservation is robustness to drive-witness offset [this is new] (simulation results to
 %~   show: transverse and longitudinal phase spaces, long offset simulation)
 
-Our configuration also shows some robustness to small electron bunch transverse offsets as the bubble generated by the
-witness bunch wakefield follows the bunch itself. The head of the bunch does not benefit from this effect, and we see
-some defocusing in this region. This effect is likely to be greater for larger offsets as the bunch oscillates around
-the axis of the drive bunch wakefield (see right hand plots of figure \ref{Fig:BeamFilament}). However, since the proton
+Our configuration also shows some robustness to small electron beam transverse offsets as the bubble generated by the
+witness beam wakefield follows the beam itself. The head of the beam does not benefit from this effect, and we see
+some defocusing in this region. This effect is likely to be greater for larger offsets as the beam oscillates around
+the axis of the drive beam wakefield (see right hand plots of figure \ref{Fig:BeamFilament}). However, since the proton
 wakefield creates a quasi linear condition, we still see the head of the beam stabilising after some time. The off-axis
 case has a larger initial emittance growth (see left hand plots of figure \ref{Fig:BeamFilament}), but the growth levels
 off after the first few metres and stays constant for the remainder of the plasma accelerator section (figure
@@ -469,7 +467,7 @@ off after the first few metres and stays constant for the remainder of the plasm
 \end{figure}
 
 For accelerator applications in general, and also for Run 2 of the AWAKE experiment, it is desirable to maximise the
-charge that can be successfully accelerated in the witness bunch. However, a longitudinally constant accelerating
+charge that can be successfully accelerated in the witness beam. However, a longitudinally constant accelerating
 field depends on both the position and the charge density of the witness beam \cite{katsouleas:1987, tzoufras:2009}.
 
 The large number of parameters involved makes the problem difficult to solve in simulations, and difficult to measure in
@@ -482,7 +480,7 @@ beam charges tend to underload the field, while higher beam charges tend to over
 with respect to the accelerating flank of the $E_{z}$-field, $\approx\lambda_{pe}/4$, will not optimally load the field
 along its length thus experiencing a larger spread in energy.
 
-A higher charge beam will generate a non-linear wakefield closer to the head of the bunch, which in turns ensures that a
+A higher charge beam will generate a non-linear wakefield closer to the head of the beam, which in turns ensures that a
 smaller portion of the beam experiences the quasi-linear region with emittance growth. As figure \ref{Fig:BeamQAbs}
 illustrates, a higher charge also results in a lower energy gain.
 
