@@ -277,7 +277,7 @@ initial $\gamma$ values we eliminate this effect entirely, but a lower initial v
 In these 3D simulations we have used a matched beam for an initial emittance of $2\unit{\mu m}$, corresponding to a
 $\sigma_{x}$ of $5.25\unit{\mu m}$. The beam matching relation is given by
 \begin{align}
-    \beta = \frac{\sigma_r^2}{\epsilon_g} = \frac{\lambda_pe}{2\pi}\sqrt{2\gamma_{rel}}, \label{EQ:Matched}
+    \beta = \frac{\sigma_r^2}{\epsilon_g} = \frac{\lambda_{pe}}{2\pi}\sqrt{2\gamma_{rel}}, \label{EQ:Matched}
 \end{align}
 where $\lambda_{p}$ is the plasma wavelength. This is a very narrow beam compared to the drive beam
 $\sigma_{x} = 200\unit{\mu m}$. The charge density of this compact witness beam reaches that of the plasma density at
@@ -481,23 +481,27 @@ beam oscillates around the axis of the drive beam wakefield (see right hand plot
         $\epsilon_{N,0}=2\unit{\mu m}$.}
 \end{figure}
 
-For accelerator applications in general, and also for Run 2 of the AWAKE experiment, it is desirable to maximise the
-charge that can be successfully accelerated in the witness beam. However, a longitudinally constant accelerating
-field depends on both the position and the charge density of the witness beam \cite{katsouleas:1987, tzoufras:2009}.
+The beam loading and blow out properties of the electron beam depends on a large number of parameters: the longitudinal
+profile, the transverse profile as well as the relative phasing of the proton and the electron beams.
 
-The large number of parameters involved makes the problem difficult to solve in simulations, and difficult to measure in
-experiments. Presented in figures \ref{Fig:BeamQ} and \ref{Fig:BeamQAbs} is a parameter scan for a matched beam with
-initial normalised emittance $\epsilon_{N,0}=2\unit{\mu m}$ after propagating through $4\unit{m}$ of plasma. We ran the
-scan with beam charge from $10\unit{pC}$ to $300\unit{pC}$ and with length $\sigma_{z}$ from $40\unit{\mu m}$ to
-$100\unit{\mu m}$. We see from figure \ref{Fig:BeamQ} that both the $40\unit{\mu m}$ and the $60\unit{\mu m}$ beam has a
-well defined minimum energy spread with a beam charge $\geq 50\unit{pC}$ and $\approx 100\unit{pC}$ respectively. Lower
-beam charges tend to underload the field, while higher beam charges tend to overload. It is also clear that long beams
-with respect to the accelerating flank of the $E_{z}$-field, $\approx\lambda_{pe}/4$, will not optimally load the field
-along its length thus experiencing a larger spread in energy.
+We here study parameter optimization relevant for AWAKE Run 2, in order to understand the ideal injection parameters.
+For AWAKE Run 2 we desire to maximize the energy gain, minimize the energy spread, maximize the charge to be accelerated
+and minimize the emittance growth. In addition, the bunch length should be such that it is possible to generate and
+transport by a compact electron injector [IPAC]. These are contradictory constraints. We  investigate the
+interdependence of these parameters by simulation. We vary the electron bunch length, charge and initial emittance. We
+quantify the resulting emittance growth, energy spread and and energy gain. The desired injection parameters will depend
+on the application.
 
-A higher charge beam will generate a non-linear wakefield closer to the head of the beam, which in turns ensures that a
-smaller portion of the beam experiences the quasi-linear region with emittance growth. As figure \ref{Fig:BeamQAbs}
-illustrates, a higher charge also results in a lower energy gain.
+Figures \ref{Fig:BeamQ} and \ref{Fig:BeamQAbs} show the dependence on bunch length and bunch charge for an initial beam
+emittance of $2\unit{\mu m}$ after propagating through $4\unit{m}$ of plasma. We ran the scan with beam charges from
+$10\unit{pC}$ to $300\unit{pC}$ and with length $\sigma_{z}$ from $40\unit{\mu m}$ to $100\unit{\mu m}$. We see from
+figure \ref{Fig:BeamQ} that both the $40\unit{\mu m}$ and the $60\unit{\mu m}$ beam has a well defined minimum energy
+spread with a beam charge $\geq 50\unit{pC}$ and $\approx 100\unit{pC}$ respectively. Lower beam charges tend to
+underload the $E_{z}$-field, while higher beam charges tend to overload it. It is also clear that long beams with
+respect to the accelerating flank of the $E_{z}$-field, $\approx\lambda_{pe}/4$, will not optimally load the field along
+its length thus experiencing a larger spread in energy.
+
+[Discussion of new emittance scan figure(s) to be added.]
 
 % ******************************************************************************************************************** %
 \section[\label{S:D}]{Discussion}
@@ -509,6 +513,17 @@ illustrates, a higher charge also results in a lower energy gain.
 % ******************************************************************************************************************** %
 \section[\label{S:C}]{Conclusion}
 % ******************************************************************************************************************** %
+
+We have studied a new plasma wakefield acceleration regime; acceleration of a strongly loaded electron beam in a quasi-
+linear proton driven wake. When optimally loaded, the electron beam creates its own ion bubble, yielding emittance
+preservation for a large parts of the electron beam.
+
+These result indicates that emittance preservation for an on-axis injected electron beam, properly optimized, is
+feasible. Parameter studies indicate that up to a few $100\unit{pC}$ might be accelerated, for bunches of length
+$40-60\unit{\mu m}$. Such an electron bunch may be generated by a standard S-band RF gun.
+
+As this study assumes a wake driven by a single, short proton beam, the studies for interesting cases for AWAKE should
+be repeated by a full simulation of a self-modulated proton beam.
 
 \section[\label{Ack}]{Acknowledgements}
 % ******************************************************************************************************************** %
