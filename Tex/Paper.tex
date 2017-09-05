@@ -116,11 +116,10 @@ A major challenge with plasma wakefield accelerators is, however, to produce an 
 energy spread and emittance as low as possible. In the well described linear case where the beam density $n_{b}$ is much
 smaller than the plasma density $n_{0}$, the non-linear transverse wakefields cause emittance growth of the accelerated
 beam. A finite length beam will also see a transversely varying accelerating field causing increasing energy spread
-\cite{katsouleas:1987}. In the non-linear regime, where $n_{b} > n_{0}$, the drive beam sees a constant transverse field
-due to a bubble forming in the plasma behind the drive beam. The bubble is formed by the transverse oscillations of the
-plasma electrons in the wake of the drive beam, forming a sheet around an evacuated area. The ions, assumed stationary,
-form an ion channel creating a focusing force that varies linearly with radius. This
-produces an axially symmetric focusing force \cite{lu:2006-1, lu:2006}.
+\cite{katsouleas:1987}. In the non-linear regime, where $n_{b} > n_{0}$, a bubble is formed by the transverse
+oscillations of the plasma electrons forming a sheet around an evacuated area leaving only ions. The ions, assumed
+stationary, form an ion channel creating a focusing force that varies linearly with radius. This produces an axially
+symmetric focusing force \cite{lu:2006-1, lu:2006}.
 %~ This effect also avoids the issue of increasing energy spread due to transverse beam loading. Increase in energy spread
 %~ is still dependent on beam loading $E_{z}$.
 %~ Ideal beam loading can be achieved by specially shaped beams that optimally flattens the field
@@ -150,9 +149,11 @@ an electron witness beam driven by two electron drive beams was demonstrated at 
 \cite{muggli:2011}.
 
 The energy carried by electron drive bunches used in previous experiments were typically small, on the order of
-$100\unit{J}$, and the propagation length typically $<1\unit{m}$ \cite{blumenfeld:2007,caldwell:2009}. De-phasing of the
-witness beam relative to the drive beam, caused by loss of energy in the drive beam and gain of energy in the witness
-beam, limits the effective length of a plasma accelerator stage. Proton drive beams available at CERN carry
+$100\unit{J}$, and the propagation length typically $<1\unit{m}$ \cite{blumenfeld:2007,caldwell:2009}. The energy of a
+high-charge electron beam accelerated to $1\unit{TeV}$, similar to the beam in the international linear collider with
+$1\mexp{10}$ electrons, is $1.6\unit{kJ}$. By using electron beams or lasers as drivers a large number of plasma stages
+is required. How to efficiently stage plasma accelerators is challenging without reducing the effective gradient and
+spoiling the beam quality \cite{steinke:2016,lindstrom:2016}. Proton drive beams available at CERN carry
 significantly more energy, $19\unit{kJ}$ for the SPS beam \cite{gschwendtner:2016}, allowing for longer accelerator
 stages. However, the SPS beam is orders of magnitude longer than the plasma wavelengths needed for such applications.
 This issue is resolved by letting the proton beam undergo self-modulation before injecting the witness beam into one of
@@ -160,6 +161,9 @@ the buckets in the modulated structure. This self-modulation instability is caus
 the beam acting upon the beam itself, causing regions of the beam to rapidly defocus \cite{kumar:2010}. The modulation
 frequency is close to that of the plasma, and leaves a train of proton bunches along the beam axis with a surrounding
 halo.
+%~ De-phasing of the
+%~ witness beam relative to the drive beam, caused by loss of energy in the drive beam and gain of energy in the witness
+%~ beam, limits the effective length of a plasma accelerator stage.
 
 % ******************************************************************************************************************** %
 \subsection[\label{S:I:AWAKE}]{AWAKE Run 2}
@@ -468,10 +472,10 @@ beam oscillates around the axis of the drive beam wakefield (see right hand plot
 \begin{figure}[hbt]
     \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQuality}
     \caption{\label{Fig:BeamQ} Ratio of total beam charge with an emittance growth $\Delta\epsilon \leq 5\%$ as a
-        function of initial beam charge (blue), and relative energy spread (red), after $4\unit{m}$ of plasma and with
-        an initial emittance $\epsilon_{N,0}=2\unit{\mu m}$. These are shown for four different $\sigma_{z}$ from
-        $40\unit{\mu m}$ to $100\unit{\mu m}$. The detailed studies presented in beam loading section corrspond to the
-        square marked lines at $100\unit{pC}$.}
+        function of initial beam charge (blue), and relative energy spread of the accepted charge (red), after
+        $4\unit{m}$ of plasma and with an initial emittance $\epsilon_{N,0}=2\unit{\mu m}$. These are shown for four
+        different $\sigma_{z}$ from $40\unit{\mu m}$ to $100\unit{\mu m}$. The detailed studies presented in beam
+        loading section corrspond to the square marked lines at $100\unit{pC}$.}
 \end{figure}
 
 \begin{figure}[hbt]
@@ -503,10 +507,17 @@ its length thus experiencing a larger spread in energy.
 
 \begin{figure}[hbt]
     \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityEmittance}
-    \caption{\label{Fig:BeamQEmit} }
+    \caption{\label{Fig:BeamQEmit} Ratio of total beam charge with an emittance growth $\Delta\epsilon \leq 5\%$ as a
+        function of initial emittance (blue), and relative energy spread of the accepted charge (red), after $4\unit{m}$
+        of plasma.}
 \end{figure}
 
-[Discussion of new emittance scan figure(s) to be added.]
+Figure \ref{Fig:BeamQEmit} shows how the growth in emittance and energy spread varies with initial electron beam
+emittance. The smaller the initial emittance is, the better the emittance is preserved. There are two effects that lead
+to growth for high emittance beams; the transverse beam size may increase beyond the size of the bubble, or the beam
+density may be reduced so much that the plasma electrons are no longer fully evacuated from the ion column. Emittance
+values higher than a few micrometers lead to a significant increase in both emittance and energy spread. In these
+simulations the focusing of the beam to the plasma remains matched for each emittance value.
 
 % ******************************************************************************************************************** %
 \section[\label{S:C}]{Conclusion}
