@@ -3,7 +3,7 @@
 ##
 
 # Dependencies
-BIBLIO  = Bibliography.bib
+BIBLIO  = Bibliography.bib Additional.bib
 DEPENDS = $(BIBLIO)
 
 # Figures

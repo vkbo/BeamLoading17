@@ -121,7 +121,7 @@ and emittance growth small. In the well described linear regime, valid when the 
 than the plasma density $n_{0}$, a non-linear transverse focusing force causes emittance growth of the witness beam.
 The beam also sees a transversely and longitudinally varying accelerating field causing a spread in energy after the
 beam has been accelerated \cite{katsouleas:1987}. In the non-linear regime, where $n_{b} > n_{0}$, a bubble is formed by
-the transverse oscillations of the plasma electrons, gathering in a sheet around an evacuated area filled with only
+the transverse oscillations of the plasma electrons, gathering in a sheath around an evacuated area filled with only
 ions. The ions, assumed stationary, form a uniform density ion channel creating a focusing force that varies linearly
 with radius. This focusing force preserves emittance \cite{rosenzweig:1991}.
 
@@ -130,8 +130,8 @@ be ensured when accelerated by a proton drive beam producing quasi-linear wakefi
 quasi-linear wakefields we here mean wakefields with only partial blow out of the plasma electrons in the bubble.
 The key idea is to have enough charge in the witness beam to at the same time load the wakefield to produce low relative
 energy spread, and completely blow out the electrons left in the bubble after the beam to reach conditions that
-preserves emittance. The results have importance for the preparation of AWAKE Run 2, and possibly other applications in
-the quasi-linear regime.
+preserves emittance. The results have importance for the preparation of AWAKE Run 2 \cite{adli:2016}, and possibly other
+applications in the quasi-linear regime.
 
 
 % ******************************************************************************************************************** %
@@ -160,14 +160,14 @@ the quasi-linear regime.
     \caption{\label{Fig:AWAKER2} A simplified illustration of the experimental setup for AWAKE Run 2. The SPS proton
         beam undergoes self-modulation in the first plasma section. The electron witness beam is injected into the
         accelerating structure, and undergoes acceleration in the second plasma section
-        \cite{berglyd_olsen:2015, adli:2016}.}
+        \cite{berglyd_olsen:2015, adli:2016}}.
 \end{figure}
 
 The energy carried by electron drive beams used in previous plasma wakefield experiments have been on the order of
 $100\unit{J}$ and the propagation length typically no more than $1\unit{m}$ \cite{blumenfeld:2007, caldwell:2009}.
 For high-energy physics application a higher total beam energy is often desired. For instance, the energy of a
 high-charge electron beam accelerated to $1\unit{TeV}$ with $1\nexp{10}$ electrons, similar to the beam that could be
-produced by the international linear collider, is $1.6\unit{kJ}$. Using electron beams as drivers, a large number of
+produced by the International Linear Collider, is $1.6\unit{kJ}$. Using electron beams as drivers, a large number of
 plasma stages is required to reach an energy of a $\unit{kJ}$ for the accelerated beam. However, staging plasma
 accelerators without reducing the effective gradient and spoiling the beam quality is challenging
 \cite{steinke:2016, lindstrom:2016}.
@@ -191,11 +191,11 @@ $\omega_{pe} = \left(n_0e^2/m_e\epsilon_0\right)^{1/2}$ is the plasma electron a
 
 The aim of the first phase of the experiment is to demonstrate self-modulation of the proton beam. The aim of the second
 phase, in 2018, is to sample the wakefield with a long electron beam $\simeq\lambda_{pe}$. The study presented here has
-relevance for Run 2 \cite{adli:2016}, starting in 2021 after the LHC long shut down 2, and aims to demonstrate
+relevance for Run 2 \cite{adli:2016}, starting in 2021 after the LHC long shutdown 2, and aims to demonstrate
 acceleration of a short electron beam, $\ll\lambda_{pe}$, to high energy and with a minimal increase in emittance and
 absolute energy spread.
 
-The plans for AWAKE Run 2 proposes to use two plasma sections, illustrated in figure \ref{Fig:AWAKER2}. The first
+The plans for AWAKE Run 2 proposes to use two plasma sections, illustrated in Fig. \ref{Fig:AWAKER2}. The first
 section of about $4\unit{m}$ is the self-modulation stage where the proton beam undergoes self-modulation without the
 electron beam present. The electron witness beam is then injected into the modulated proton beam before section two
 where it undergoes acceleration. The self-modulated proton beam does not produce a fully non-linear wakefield, and
@@ -232,14 +232,14 @@ field -- are the same as in the wake of a self-modulated proton beam with AWAKE 
 \cite{gschwendtner:2016}. Both the proton beam and the witness beam have Gaussian longitudinal charge distribution and
 bi-Gaussian transverse charge distributions.
 
-We have previously studied the beam loading in a proton beam wake using the full PIC code Osiris \cite{fonseca:2002}
-and with 2D cylindrical-symmetric simulations. The studies \cite{berglyd_olsen:2015, berglyd_olsen:2016} primarily
-looked at beam loading, energy gain and energy spread, as well as different approaches to creating a stable drive beam
-structure based on previous self-modulation studies. In order to study the witness beam emittance evolution we use the
-recently released open source version of QuickPIC \cite{huang:2006, an:2013}. QuickPIC is a fully relativistic 3D
-quasi-static PIC code. It does not suffer from the numerical Cherenkov effect that full PIC codes do
+We have previously studied the beam loading in a proton beam wake using the full particle-in-cell (PIC) code OSIRIS
+\cite{fonseca:2002} with 2D cylindrical-symmetric simulations. The studies \cite{berglyd_olsen:2015, berglyd_olsen:2016}
+primarily looked at beam loading, energy gain and energy spread, as well as different approaches to creating a stable
+drive beam structure based on previous self-modulation studies. In order to study the witness beam emittance evolution
+we use the recently released open-source version of QuickPIC \cite{huang:2006, an:2013}. QuickPIC is a fully
+relativistic 3D quasi-static PIC code. It does not suffer from the numerical Cherenkov effect that full PIC codes do
 \cite{godfrey:1974,lehe:2013}, making it a well suited tool to study emittance preservation. All simulation results in
-this paper were obtained using QuickPIC open source.
+this paper were obtained using QuickPIC open-source \cite{quickpic:web}.
 
 %~ In order to evaluate the quality of the accelerated bunch it was also necessary to study emittance evolution. However,
 %~ full PIC codes are vulnerable to numerical growth of emittance caused by the ``numerical Cherenkov effect''
@@ -272,7 +272,7 @@ this paper were obtained using QuickPIC open source.
 
 The modulation process used in AWAKE does not reach the fully non-linear regime and thus does not produce a bubble void
 of plasma electrons. When the SPS beam, containing $3\nexp{11}$ protons \cite{gschwendtner:2016}, enters the second
-plasma section (figure \ref{Fig:AWAKER2}), the peak electric field is expected to be about $500\funit{MV}{m}$. The
+plasma section (Fig. \ref{Fig:AWAKER2}), the peak electric field is expected to be about $500\funit{MV}{m}$. The
 plasma electron density is only depleted to around $65\%$ of nominal plasma density at the point where we inject the
 electron beam \cite{awake_collaboration:2016}. The plasma electron density depletion and the peak field is replicated
 using a single bunch with $1.46\nexp{10}$ protons ($2.34\unit{nC}$), a length $\sigma_{z} = 40\unit{\mu m}$
@@ -294,7 +294,7 @@ is:
 \end{equation}
 
 We assume an initial normalized emittance of $\epsilon_{\mathrm{N}} = 2\unit{\mu m}$. This emittance is possible to
-produce with a standard RF-injector, while at the same time yielding a sufficient narrow beam.
+produce with a standard RF-injector, while at the same time yielding a sufficiently narrow beam.
 % EA: comment, perhaps put a ref here [***ref]. 
 
 Beam loading of a short witness beam is sensitive to its position relative to the electric field \cite{tzoufras:2009}
@@ -304,12 +304,12 @@ lower initial energy is likely to be sufficient for AWAKE Run 2 injection.
 % EA: we have studied this to some extent, but unfortunately we do not have a good refence for the last statement,
 %     no details in \cite{berglyd_olsen:2015}.
 
-Eq. (\ref{EQ:Matched}) yields a transverse size $\sigma_{x,y,eb}$ of $5.25\unit{\mu m}$, which is narrow compared to the
-drive beam $\sigma_{x,y,pb} = 200\unit{\mu m}$. The bunch length was set to $\sigma_{z} = 60\unit{\mu m}$, based on
-earlier beam loading studies \cite{berglyd_olsen:2016}. The charge is adjusted to $100\unit{pC}$ for optimal beam
+Equation~(\ref{EQ:Matched}) yields a transverse size $\sigma_{x,y,eb}$ of $5.25\unit{\mu m}$, which is narrow compared
+to the drive beam $\sigma_{x,y,pb} = 200\unit{\mu m}$. The bunch length was set to $\sigma_{z} = 60\unit{\mu m}$, based
+on earlier beam loading studies \cite{berglyd_olsen:2016}. The charge is adjusted to $100\unit{pC}$ for optimal beam
 loading, as discussed in the next section. We refer to the defined drive beam and witness beam parameter set as the
-\emph{base case}. Figure \ref{Fig:PlasmaDenTWake} shows the two beams from QuickPIC simulations of the initial time
-step, for the base case parameters; the proton beam in blue, the trailing electron beam in red and the plasma electron
+\emph{base case}. Figure \ref{Fig:PlasmaDenTWake} shows the two beams from a QuickPIC simulation of the initial time
+step, for the base case parameters; the proton beam in blue, the trailing electron beam in red, and the plasma electron
 density in grey. 
 
 %   EA: the discussing of charge could better be discussed in the "beam loading chapter" - the information has been moved to there
@@ -344,8 +344,8 @@ the plasma electrons with $1024 \times 1024$ weighted particles per transverse s
 
 \begin{figure}[hbt]
     \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamPhaseSpace}
-    \caption{\label{Fig:BeamPS} Phase space charge distribution of a $100\unit{pC}$, $60\unit{\mu m}$ long witness beam
-        after $4\unit{m}$ of plasma. The mean momentum is $1.67\unit{GeV/c}$ with an RMS energy spread
+    \caption{\label{Fig:BeamPS} Longitudinal phase space charge distribution of a $100\unit{pC}$, $60\unit{\mu m}$ long
+        witness beam after $4\unit{m}$ of plasma. The mean momentum is $1.67\unit{GeV/c}$ with an RMS energy spread
         of $87\unit{MeV/c}$ ($5.2\%$) for the full beam.}
 \end{figure}
 
@@ -410,8 +410,8 @@ the plasma electrons with $1024 \times 1024$ weighted particles per transverse s
 Figure \ref{Fig:BeamLoading} shows the results of QuickPIC simulations of the initial time step for the base case
 parameters. The $E_{z}$-field generated by the proton drive beam is seen as the blue line, shown with and without the
 electron beam present. With a proton beam density $n_{pb} \simeq n_{0}$, the wakefields are in the quasi-linear regime
-\cite{rosenzweig:2010}. The dashed green line in the lower part of figure \ref{Fig:BeamLoading} shows that the on-axis
-plasma density has a depletion of $67\%$, close to what we see in full scale reference simulations for AWAKE Run 2
+\cite{rosenzweig:2010}. The dashed green line in the lower part of Fig. \ref{Fig:BeamLoading} shows that the on-axis
+plasma density has a depletion to $67\%$, close to what we see in full scale reference simulations for AWAKE Run 2
 \cite{awake_collaboration:2016}.
 
 %~ The witness beam generates its own wakefield, which in the accelerating phase partially cancels out the $E_{z}$ field
@@ -425,7 +425,7 @@ The witness beam generates its own wakefield which loads the $E_{z}$-field gener
 shaped electron beam charge profile it is possible to optimally load the field in such a way that the accelerating field
 is constant along the beam \cite{katsouleas:1987, tzoufras:2009}. Gaussian beams, as assumed in these studies, cannot
 completely flatten the electric field in the tails of the charge distribution, and our base case beam therefore has a
-tail in energy both at the front and the back of the beam, as illustrated in figure \ref{Fig:BeamPS}. The bulk of the
+tail in energy both at the front and the back of the beam, as illustrated in Fig. \ref{Fig:BeamPS}. The bulk of the
 beam, however, sees a relatively flat field.
 % EA: I rewrote this to the sentence after the comments
 %we can acceleratoreHowever, with such a narrow beam when matched beam to the plasma density (equation
@@ -436,9 +436,9 @@ beam, however, sees a relatively flat field.
 
 The initial electron beam density is $n_{eb} \approx 35\cdot n_{0}$. This means that the witness beam's own wakefield
 is in the fully non-linear regime, where the space charge force is sufficient to blow out all plasma electrons,
-resulting in the formation of an ion column (see figure \ref{Fig:BeamLoading}, bottom). This ion column, as is well
+resulting in the formation of an ion column (see Fig. \ref{Fig:BeamLoading}, bottom). This ion column, as is well
 known \cite{rosenzweig:1991}, provides a linear focusing force on the part the electron beam within the column, and
-therefore prevents emittance growth for this part of the beam. This effect is shown for our base case in figure
+therefore prevents emittance growth for this part of the beam. This effect is shown for our base case in Fig.
 \ref{Fig:PlasmaDenTWake}. The focusing field has a gradient of $20\unit{kT/m}$ near the beam axis, corresponding to the
 matched field gradient.
 
@@ -470,45 +470,22 @@ after about $50\unit{m}$.
 So far we have considered a witness beam injected on the axis of the proton beam. We now briefly examine the case of
 injection of a witness beam with an offset with respect to the proton beam axis. Since the witness beam creates its own
 plasma bubble, the emittance of the part of the beam inside the bubble is not affected by small transverse offsets of
-the witness beam with respect to the proton beam axis. This is illustrated in figure \ref{Fig:BeamEmitt}, right, for an
+the witness beam with respect to the proton beam axis. This is illustrated in Fig. \ref{Fig:BeamEmitt}, right, for an
 electron beam offset of $1\sigma_{x,eb}$. Emittance preservation for small offsets is an added benefit of this
 accelerating regime, and may ease transverse injection tolerances. The head of the beam experiences a larger initial
-emittance growth than for the on-axis case (compare figure \ref{Fig:BeamEmitt}, left, to \ref{Fig:BeamEmitt}, right).
+emittance growth than for the on-axis case (compare Fig. \ref{Fig:BeamEmitt}, left, to Fig. \ref{Fig:BeamEmitt}, right).
 However, also for the head of the beam the emittance growth ends after the first few metres.
 Figure \ref{Fig:BeamFilament}a-c show the phase space of the head of the electron beam after $0$, $1.0$ and
-$2.5\unit{m}$, while figure \ref{Fig:BeamFilament}d-f show the phase space of the trailing part of the beam. The
-centroid oscillations of the head and the trailing part are shown in figure \ref{Fig:BeamFilament}g. This effect of a
+$2.5\unit{m}$, while Fig. \ref{Fig:BeamFilament}d-f show the phase space of the trailing part of the beam. The
+centroid oscillations of the head and the trailing part are shown in Fig. \ref{Fig:BeamFilament}g. This effect of a
 transverse offset is likely to be greater for larger offsets as the beam oscillates around the axis of the drive beam
 wakefield. [Will add results on how much offset can be tolerated as soon as the simulations are done.]
 
 The transverse beam size within the bubble, where normalised emittance is preserved, follows the evolution given by
-equation \ref{EQ:Matched}; that is, evolves to stay matched. The on-axis density of the electron beam, as a result,
-increases as its gamma factor increases and its transverse size decreases. This effect can be seen in figure
+Eq. \ref{EQ:Matched}; that is, evolves to stay matched. The on-axis density of the electron beam, as a result,
+increases as its gamma factor increases and its transverse size decreases. This effect can be seen in Fig.
 \ref{Fig:BeamFilament}h. This has the potential to cause overloading of the field. However, for the base case no
 significant overloading is observed.  
-
-\begin{figure}[hbt]
-    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQuality}
-    \caption{\label{Fig:BeamQ} Ratio of beam charge with emittance preserved, $\widetilde{Q}/Q$, as a function of
-        initial beam charge (blue symbols, lines), and relative energy spread of the accepted charge (red symbols,
-        lines), after $4\unit{m}$ of plasma and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.
-        These are shown for four different $\sigma_{z}$ from $40\unit{\mu m}$ to $100\unit{\mu m}$. The detailed studies
-        presented in beam loading section correspond to the square marked lines at $100\unit{pC}$.}
-\end{figure}
-
-\begin{figure}[hbt]
-    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityAbs}
-    \caption{\label{Fig:BeamQAbs} Beam charge with emittance preserved, $\widetilde{Q}$, as a function of initial beam
-        charge (blue symbols, lines), and final energy (red symbols, lines), after $4\unit{m}$ of plasma and with an
-        initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.}
-\end{figure}
-
-\begin{figure}[hbt]
-    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityEmittance}
-    \caption{\label{Fig:BeamQEmit} Ratio of beam charge with emittance preserved, $\widetilde{Q}/Q$, as a function of
-        initial emittance (blue symbols, lines), and relative energy spread of the accepted charge (red symbols, lines),
-        after $4\unit{m}$ of plasma.}
-\end{figure}
 
 % ******************************************************************************************************************** %
 \section{Parameter Optimisation}\label{S:PO}
@@ -524,7 +501,7 @@ significant overloading is observed.
 The beam loading and blow out properties of the electron beam depend on a large number of parameters, including
 longitudinal profile, transverse profile, as well as relative phasing of the proton and the electron beams. We present a
 limited parameter study aimed at guiding beam parameter choices for AWAKE Run 2. For an electron beam to be externally
-injected in AWAKE Run 2 (see figure \ref{Fig:AWAKER2}) it is desired to maximise the energy gain, minimise the energy
+injected in AWAKE Run 2 (see Fig. \ref{Fig:AWAKER2}) it is desired to maximise the energy gain, minimise the energy
 spread, maximise the charge to be accelerated, and minimise the emittance growth \cite{adli:2016}. In addition, the
 beam length should be such that it is possible to generate and transport the beam using a compact electron injector
 \cite{adli:2016}. We investigate the interdependence of these parameters in simulation by varying the electron beam
@@ -532,24 +509,47 @@ length, its charge, and initial emittance. The results are quantified in terms o
 initial emittance. For these parameter scans we used a transverse grid cell size of $2.34\unit{\mu m}$, and let the
 beams propagate through $4\unit{m}$ of plasma.
 
-Figure \ref{Fig:BeamQ} shows the dependence of charge and energy spread on beam length and incoming charge. An initial
-beam emittance of $2\unit{\mu m}$ was used. Therefore, we define the fractional charge $\widetilde{Q}$ as the charge
-whose emittance remains smaller than $2.1\unit{\mu m}$. The beam charges range from $10\unit{pC}$ to $300\unit{pC}$, and
-the $\sigma_{z}$ ranges from $40\unit{\mu m}$ to $100\unit{\mu m}$. As can be seen from figure \ref{Fig:BeamQ} (red
-curves), both the $40\unit{\mu m}$ and the $60\unit{\mu m}$ beams have a well defined minimum energy spread with an
-initial beam charge $\approx 50\unit{pC}$ and $\approx 100\unit{pC}$, respectively. Lower beam charges tend to
-underload the electric field, while higher beam charges tend to overload it. It is also clear that longer beams with
-respect to the accelerating phase of the field, $\approx\lambda_{pe}/4$, do not optimally load the wake, thus producing
-a larger spread in energy. The blue curves show the fraction of charge whose initial emittance is preserved (the slice
-emittance for the base case is shown in figure \ref{Fig:BeamEmitt}). As the witness beam charge increases, the fraction
-of slices with preserved emittance increases -- as expected from an earlier onset of the bubble formation -- and also
-increases in the bubble size \cite{lu:2006-1, lu:2006}. We note here that operation with $100\unit{pC}$ leads to a
-significantly larger charge (factor $\sim 4$) with emittance preserved, at the expense of an increase of relative energy
-spread by a factor of two.
+\begin{figure}[hbt]
+    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQuality}
+    \caption{\label{Fig:BeamQ} Ratio of witness beam charge with emittance preserved, $\widetilde{Q}/Q$, as a function
+        of initial beam charge (blue symbols, lines), and relative energy spread of the accepted charge (red symbols,
+        lines), after $4\unit{m}$ of plasma and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.
+        These are shown for four different $\sigma_{z}$ from $40\unit{\mu m}$ to $100\unit{\mu m}$. The detailed studies
+        presented in beam loading section correspond to the square marked lines at $100\unit{pC}$.}
+\end{figure}
+
+\begin{figure}[hbt]
+    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityAbs}
+    \caption{\label{Fig:BeamQAbs} Witness beam charge with emittance preserved, $\widetilde{Q}$, as a function of
+        initial beam charge (blue symbols, lines), and final energy (red symbols, lines), after $4\unit{m}$ of plasma
+        and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.}
+\end{figure}
+
+Figure \ref{Fig:BeamQ} shows the dependence of charge and energy spread on witness beam length and incoming charge. An
+initial beam emittance of $2\unit{\mu m}$ was used. Therefore, we define the fractional charge $\widetilde{Q}$ as the
+charge whose emittance remains smaller than $2.1\unit{\mu m}$. The beam charges range from $10\unit{pC}$ to
+$300\unit{pC}$, and $\sigma_{z}$ ranges from $40\unit{\mu m}$ to $100\unit{\mu m}$. As can be seen from Fig.
+\ref{Fig:BeamQ} (red curves), both the $40\unit{\mu m}$ and the $60\unit{\mu m}$ beams have a well defined minimum
+energy spread with an initial beam charge $\approx 50\unit{pC}$ and $\approx 100\unit{pC}$, respectively. Lower beam
+charges tend to underload the electric field, while higher beam charges tend to overload it. It is also clear that
+longer beams with respect to the accelerating phase of the field, $\approx\lambda_{pe}/4$, do not optimally load the
+wake, thus producing a larger spread in energy. The blue curves show the fraction of charge whose initial emittance is
+preserved (the slice emittance for the base case is shown in Fig. \ref{Fig:BeamEmitt}). As the witness beam charge
+increases, the fraction of slices with preserved emittance increases -- as expected from an earlier onset of the bubble
+formation -- and also increases in the bubble size \cite{lu:2006-1, lu:2006}. We note here that operation with
+$100\unit{pC}$ leads to a significantly larger charge (factor $\sim 4$) with emittance preserved, at the expense of an
+increase of relative energy spread by a factor of two.
 
 Figure \ref{Fig:BeamQAbs} shows the dependence of mean energy gain on beam length and beam charge (red curves). The blue
 curves show the amount of charge in the longitudinal slices where the emittance has been preserved, as a function of
 beam length and beam charge.
+
+\begin{figure}[hbt]
+    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityEmittance}
+    \caption{\label{Fig:BeamQEmit} Ratio of witness beam charge with emittance preserved, $\widetilde{Q}/Q$, as a
+        function of initial emittance (blue symbols, lines), and relative energy spread of the accepted charge (red
+        symbols, lines), after $4\unit{m}$ of plasma.}
+\end{figure}
 
 Figure \ref{Fig:BeamQEmit} shows how the growth in emittance and energy spread varies with initial electron beam
 emittance. In these simulations we adjusted the witness beam radius to maintain the matching condition at each
