@@ -227,8 +227,8 @@ proton beams show that the proton beam evolves as it propagates through a unifor
 small variations in the plasma profile the modulation, and thus the wakefields, may be stabilised over long
 distances~\cite{lotov:2011, lotov:2015, caldwell:2011}. To study the witness beam evolution in a stable wake,
 independent of the dynamics of the self-modulation, we use a single, non-evolving proton bunch as driver. The proton
-beam parameters are chosen so that key features of the wake -- the plasma electron density in the wake and the
-longitudinal electric field -- are the same as in the wake of a self-modulated proton beam with AWAKE baseline
+beam parameters are chosen so that key features of the wake \textendash the plasma electron density in the wake and the
+longitudinal electric field \textendash are the same as in the wake of a self-modulated proton beam with AWAKE baseline
 parameters~\cite{gschwendtner:2016}. Both the proton beam and the witness beam have Gaussian longitudinal charge
 distribution and bi-Gaussian transverse charge distributions.
 
@@ -355,7 +355,7 @@ the plasma electrons with $1024 \times 1024$ weighted particles per transverse s
     \includegraphics[width=0.495\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamEmittanceOffset}
     \caption{\label{Fig:BeamEmitt} Beam density in blue along the beam axis for an on-axis beam with respect to the
         drive beam axis (left), and an offset beam (right) with an offset of one $\sigma_{x,eb} = 5.24\unit{\mu m}$ in
-        the x-plane -- at four different positions $z$ in the plasma stage. The red lines show a moving window
+        the x-plane \textendash at four different positions $z$ in the plasma stage. The red lines show a moving window
         calculation of transverse normalised emittance. The moving window calculation uses longitudinal slices of
         $l = 4\cdot\Delta\xi = 9.38\unit{\mu m}$ with a step of $\Delta\xi$. Only slices with more than $100$ macro
         particles have been included. The plasma density profile is included in green, and scaled up by a factor of
@@ -456,16 +456,21 @@ the matched field gradient.
  %PMDue to the ion column focusing, 
 
 \begin{figure*}[hbt]
-    \includegraphics[width=0.49\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQuality}
-    \includegraphics[width=0.49\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityAbs}
-    \caption{\label{Fig:BeamQ} Left: Ratio of witness beam charge with emittance preserved, $\widetilde{Q}/Q$, as a function
-        of initial beam charge (blue symbols, lines), and relative energy spread of the accepted charge (red symbols,
-        dashed lines), after $4\unit{m}$ of plasma and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.
-        These are shown for four different $\sigma_{z}$ from $40\unit{\mu m}$ to $100\unit{\mu m}$. The detailed studies
-        presented in beam loading section correspond to the square marked lines at $100\unit{pC}$.
-        Right: Witness beam charge with emittance preserved, $\widetilde{Q}$, as a function of
-        initial beam charge (blue symbols, lines), and final energy (red symbols, dashed lines), after $4\unit{m}$ of
-        plasma and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.}
+    \begin{minipage}[t]{.48\textwidth}
+        \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQuality}
+        \caption{\label{Fig:BeamQ} Ratio of witness beam charge with emittance preserved, $\widetilde{Q}/Q$ (blue
+            symbols, lines), as a function of initial beam charge, and relative energy spread of the accepted charge
+            (red symbols, dashed lines), after $4\unit{m}$ of plasma and with an initial emittance
+            $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$. These are shown for four different $\sigma_{z}$ from
+            $40\unit{\mu m}$ to $100\unit{\mu m}$. The detailed studies presented in beam loading section correspond to
+            the square marked lines at $100\unit{pC}$.}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{.48\textwidth}
+        \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityAbs}
+        \caption{\label{Fig:BeamQAbs} Witness beam charge with emittance preserved, $\widetilde{Q}$ (blue symbols,
+            lines), as a function of initial beam charge, and final energy (red symbols, dashed lines), after
+            $4\unit{m}$ of plasma and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.}
+    \end{minipage}
 \end{figure*}
 
 Figure~\ref{Fig:BeamEmitt} shows the slice emittance along the beam for the base case, sampled after propagating through
@@ -541,12 +546,12 @@ charges tend to underload the electric field, while higher beam charges tend to 
 longer beams with respect to the accelerating phase of the field, $\approx\lambda_{pe}/4$, do not optimally load the
 wake, thus producing a larger spread in energy. The blue curves show the fraction of charge whose initial emittance is
 preserved (the slice emittance for the base case is shown in Fig.~\ref{Fig:BeamEmitt}). As the witness beam charge
-increases, the fraction of slices with preserved emittance increases -- as expected from an earlier onset of the bubble
-formation -- and also increases in the bubble size~\cite{lu:2006-1, lu:2006}. We note here that operation with
-$100\unit{pC}$ leads to a significantly larger charge (factor $\sim 4$) with emittance preserved, at the expense of an
-increase of relative energy spread by a factor of two.
+increases, the fraction of slices with preserved emittance increases \textendash as expected from an earlier onset of
+the bubble formation \textendash and also increases in the bubble size~\cite{lu:2006-1, lu:2006}. We note here that
+operation with $100\unit{pC}$ leads to a significantly larger charge (factor $\sim 4$) with emittance preserved, at the
+expense of an increase of relative energy spread by a factor of two.
 
-Figure~\ref{Fig:BeamQ} shows the dependence of mean energy gain on beam length and beam charge (red curves). The blue
+Figure~\ref{Fig:BeamQAbs} shows the dependence of mean energy gain on beam length and beam charge (red curves). The blue
 curves show the amount of charge in the longitudinal slices where the emittance has been preserved, as a function of
 beam length and beam charge.
 
