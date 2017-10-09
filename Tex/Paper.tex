@@ -185,7 +185,7 @@ AWAKE at CERN is a proof of concept proton beam driven plasma wakefield accelera
 \cite{awake_collaboration:2014}, currently in its first phase of operation. The experiment uses a $400\unit{GeV}$ proton
 beam delivered by the SPS as its driver, and a single $10\unit{m}$ plasma stage with a nominal plasma density of
 $7\nexp{14}\unit{cm}^{-3}$~\cite{gschwendtner:2016}. This plasma density corresponds to $\lambda_{pe} = 1.26\unit{mm}$
--- matched to the transverse size of the SPS proton beam such that $k_{pe}\sigma_{x,y,pb} = 1$, where
+and is matched to the transverse size of the SPS proton beam such that $k_{pe}\sigma_{x,y,pb} = 1$~\cite{lu:2005}, where
 $k_{pe} = 2\pi/\lambda_{pe}$ is the plasma wave number, $\lambda_{pe} = 2\pi c/\omega_{pe}$, and
 $\omega_{pe} = \left(n_0e^2/m_e\epsilon_0\right)^{1/2}$ is the plasma electron angular frequency.
 
@@ -334,11 +334,11 @@ the plasma electrons with $1024 \times 1024$ weighted particles per transverse s
 
 \begin{figure}[hbt]
     \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamLoading}
-    \caption{\label{Fig:BeamLoading} \textbf{Top plot:} Unloaded longitudinal electric field with no witness beam
+    \caption{\label{Fig:BeamLoading} Top plot: Unloaded longitudinal electric field with no witness beam
         (dashed blue line) and loaded field (whole blue line) along the beam axis. The beam density along the axis for
         both beams are shown in red.
-        \textbf{Bottom plot:} Plasma densities along the beam axis for a drive beam with no witness beam (dashed green
-        line), witness beam with no drive beam (dash-dotted green line), and both beams present (whole green line).
+        Bottom plot: Plasma densities along the beam axis for a drive beam with no witness beam (dashed green line),
+        witness beam with no drive beam (dash-dotted green line), and both beams present (whole green line).
         $\xi = z - tc$ is the position in the simulation box, moving towards the left. The plots show the initial time
         step.}
 \end{figure}
@@ -514,7 +514,7 @@ beams propagate through $4\unit{m}$ of plasma.
     \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQuality}
     \caption{\label{Fig:BeamQ} Ratio of witness beam charge with emittance preserved, $\widetilde{Q}/Q$, as a function
         of initial beam charge (blue symbols, lines), and relative energy spread of the accepted charge (red symbols,
-        lines), after $4\unit{m}$ of plasma and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.
+        dashed lines), after $4\unit{m}$ of plasma and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.
         These are shown for four different $\sigma_{z}$ from $40\unit{\mu m}$ to $100\unit{\mu m}$. The detailed studies
         presented in beam loading section correspond to the square marked lines at $100\unit{pC}$.}
 \end{figure}
@@ -522,8 +522,8 @@ beams propagate through $4\unit{m}$ of plasma.
 \begin{figure}[hbt]
     \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityAbs}
     \caption{\label{Fig:BeamQAbs} Witness beam charge with emittance preserved, $\widetilde{Q}$, as a function of
-        initial beam charge (blue symbols, lines), and final energy (red symbols, lines), after $4\unit{m}$ of plasma
-        and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.}
+        initial beam charge (blue symbols, lines), and final energy (red symbols, dashed lines), after $4\unit{m}$ of
+        plasma and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.}
 \end{figure}
 
 Figure~\ref{Fig:BeamQ} shows the dependence of charge and energy spread on witness beam length and incoming charge. An
@@ -548,8 +548,8 @@ beam length and beam charge.
 \begin{figure}[hbt]
     \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityEmittance}
     \caption{\label{Fig:BeamQEmit} Ratio of witness beam charge with emittance preserved, $\widetilde{Q}/Q$, as a
-        function of initial emittance (blue symbols, lines), and relative energy spread of the accepted charge (red
-        symbols, lines), after $4\unit{m}$ of plasma.}
+        function of initial emittance (blue symbols, line), and relative energy spread of the accepted charge (red
+        symbols, dashed line), after $4\unit{m}$ of plasma.}
 \end{figure}
 
 Figure~\ref{Fig:BeamQEmit} shows how the growth in emittance and energy spread varies with initial electron beam
