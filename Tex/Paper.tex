@@ -455,6 +455,19 @@ the matched field gradient.
 %For the majority of the cases we studied, that maintained a stable accelerating structure, 
  %PMDue to the ion column focusing, 
 
+\begin{figure*}[hbt]
+    \includegraphics[width=0.49\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQuality}
+    \includegraphics[width=0.49\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityAbs}
+    \caption{\label{Fig:BeamQ} Left: Ratio of witness beam charge with emittance preserved, $\widetilde{Q}/Q$, as a function
+        of initial beam charge (blue symbols, lines), and relative energy spread of the accepted charge (red symbols,
+        dashed lines), after $4\unit{m}$ of plasma and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.
+        These are shown for four different $\sigma_{z}$ from $40\unit{\mu m}$ to $100\unit{\mu m}$. The detailed studies
+        presented in beam loading section correspond to the square marked lines at $100\unit{pC}$.
+        Right: Witness beam charge with emittance preserved, $\widetilde{Q}$, as a function of
+        initial beam charge (blue symbols, lines), and final energy (red symbols, dashed lines), after $4\unit{m}$ of
+        plasma and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.}
+\end{figure*}
+
 Figure~\ref{Fig:BeamEmitt} shows the slice emittance along the beam for the base case, sampled after propagating through
 $0$, $4$, $40$ and $100\unit{m}$ of plasma. We define emittance of a slice as preserved if the growth is less than
 $5\%$, and $\widetilde{Q}$ as the sum charge of the slices for which the emittance is preserved. Simulation results show
@@ -510,21 +523,13 @@ beam length, its charge, and initial emittance. The results are quantified in te
 initial emittance. For these parameter scans we used a transverse grid cell size of $2.34\unit{\mu m}$, and let the
 beams propagate through $4\unit{m}$ of plasma.
 
-\begin{figure}[hbt]
-    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQuality}
-    \caption{\label{Fig:BeamQ} Ratio of witness beam charge with emittance preserved, $\widetilde{Q}/Q$, as a function
-        of initial beam charge (blue symbols, lines), and relative energy spread of the accepted charge (red symbols,
-        dashed lines), after $4\unit{m}$ of plasma and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.
-        These are shown for four different $\sigma_{z}$ from $40\unit{\mu m}$ to $100\unit{\mu m}$. The detailed studies
-        presented in beam loading section correspond to the square marked lines at $100\unit{pC}$.}
-\end{figure}
-
-\begin{figure}[hbt]
-    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityAbs}
-    \caption{\label{Fig:BeamQAbs} Witness beam charge with emittance preserved, $\widetilde{Q}$, as a function of
-        initial beam charge (blue symbols, lines), and final energy (red symbols, dashed lines), after $4\unit{m}$ of
-        plasma and with an initial emittance $\epsilon_{\mathrm{N},0}=2\unit{\mu m}$.}
-\end{figure}
+\begin{figure*}[hbt]
+    \includegraphics[width=0.49\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityOffset}
+    \includegraphics[width=0.49\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityEmittance}
+    \caption{\label{Fig:BeamQEmit} Ratio of witness beam charge with emittance preserved, $\widetilde{Q}/Q$
+        (blue symbols, line), as a function of beam offset (left) and initial emittance (right), with relative energy
+        spread of the accepted charge (red symbols, dashed line), after $4\unit{m}$ of plasma.}
+\end{figure*}
 
 Figure~\ref{Fig:BeamQ} shows the dependence of charge and energy spread on witness beam length and incoming charge. An
 initial beam emittance of $2\unit{\mu m}$ was used. Therefore, we define the fractional charge $\widetilde{Q}$ as the
@@ -541,16 +546,9 @@ formation -- and also increases in the bubble size~\cite{lu:2006-1, lu:2006}. We
 $100\unit{pC}$ leads to a significantly larger charge (factor $\sim 4$) with emittance preserved, at the expense of an
 increase of relative energy spread by a factor of two.
 
-Figure~\ref{Fig:BeamQAbs} shows the dependence of mean energy gain on beam length and beam charge (red curves). The blue
+Figure~\ref{Fig:BeamQ} shows the dependence of mean energy gain on beam length and beam charge (red curves). The blue
 curves show the amount of charge in the longitudinal slices where the emittance has been preserved, as a function of
 beam length and beam charge.
-
-\begin{figure}[hbt]
-    \includegraphics[width=\linewidth,trim={2mm 0mm 2mm 0mm},clip]{figures/beamQualityEmittance}
-    \caption{\label{Fig:BeamQEmit} Ratio of witness beam charge with emittance preserved, $\widetilde{Q}/Q$, as a
-        function of initial emittance (blue symbols, line), and relative energy spread of the accepted charge (red
-        symbols, dashed line), after $4\unit{m}$ of plasma.}
-\end{figure}
 
 Figure~\ref{Fig:BeamQEmit} shows how the growth in emittance and energy spread varies with initial electron beam
 emittance. In these simulations we adjusted the witness beam radius to maintain the matching condition at each
